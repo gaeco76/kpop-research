@@ -1,9 +1,9 @@
 // 공용 표 정렬 헬퍼: 헤더 클릭으로 오름/내림 정렬 (날짜·숫자·한글 자동 판별)
 (function(){
 const SKIP=new Set(['tourTable','trkTable','recTable','ytTable']); // 자체 정렬 로직이 있는 표
-const SECS=['artists','brands','industry','events','auditions','rpd','tracker'];
+const SECS=['hybe','artists','brands','industry','events','auditions','rpd','tracker'];
 const txt=c=>(c?c.textContent:'').replace(/\[\d+\]/g,'').replace(/\s+/g,' ').trim();
-const EMPTY=/^(—|-|–|미확인|미정|)$/;
+const EMPTY=/^$|^(—|-|–|미확인|미정)(\s|\(|$)/; // '미확인 (매진 보도)' 같은 주석 포함 값도 빈 값 취급
 function dateKey(s){let m=s.match(/^(\d{4})-(\d{1,2})(?:-(\d{1,2}))?/);if(m)return (+m[1])*10000+(+m[2])*100+(+(m[3]||0));
  m=s.match(/^(\d{4})(경)?$/);if(m)return (+m[1])*10000+1300;m=s.match(/^(\d{1,2})\/(\d{1,2})/);if(m)return 20260000+(+m[1])*100+(+m[2]);return null;}
 function numKey(s){let t=s.replace(/^[+~≈약$₩\s]+/,''),neg=false;if(/^[-−]/.test(t)){neg=true;t=t.slice(1).replace(/^\$/,'');}if(!/^\d/.test(t))return null;
@@ -18,7 +18,7 @@ function sortTable(table,col,dir){
  const rows=[...tb.rows].filter(r=>r.cells.length>col&&!r.querySelector('td[colspan]'));
  const pinned=rows.filter(r=>/^(합계|총계|Total)/.test(txt(r.cells[0])));
  const body=rows.filter(r=>!pinned.includes(r));
- const vals=body.map(r=>txt(r.cells[col]));const ne=vals.filter(v=>!EMPTY.test(v));
+ const vals=body.map(r=>{const c=r.cells[col];return c&&c.dataset.sort!=null?c.dataset.sort:txt(c);});const ne=vals.filter(v=>!EMPTY.test(v));
  const type=ne.length&&ne.every(v=>dateKey(v)!=null)?'date':ne.length&&ne.every(v=>numKey(v)!=null)?'num':'text';
  const key=v=>EMPTY.test(v)?null:type==='date'?dateKey(v):type==='num'?numKey(v):v;
  const items=body.map((r,i)=>({r,k:key(vals[i]),i}));

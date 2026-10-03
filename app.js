@@ -254,3 +254,44 @@ const block=(x,R,id,statusCol)=>x?`<h2 id="${id}" style="margin-top:36px">${esc(
 // --- 산업: 유튜브 조회수 ---
 {const Y=ind.ytViews;if(Y){const R=Reg('industry2');$('#indYT').innerHTML=`<h3>${esc(Y.title)} ${badge(Y.status)}${R.ref(Y.sources)}</h3><div class="grid2"><div class="card"><h4>30초 통과율별 예상 배수</h4><table class="data">${tbl(['통과율','배수','증가율'],Y.pass.map(r=>r.map(esc)))}</table></div><div class="card"><h4>영상 유형별</h4><table class="data">${tbl(['유형','추정 통과율','예상 배수'],Y.types.map(r=>r.map(esc)))}</table></div></div><ul class="list small">${Y.points.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`;R.render($('#src-industry2'));}}
 })().catch(e=>{document.querySelector('main').insertAdjacentHTML('afterbegin','<p style="color:#c9302c">배치1 데이터 로드 실패: '+e.message+'</p>')});
+
+// ===== 하이브 투어 탭 (data/hybe.json) =====
+(async function(){
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const [sources,H]=await Promise.all(['sources','hybe'].map(n=>fetch('data/'+n+'.json?v='+Date.now()).then(r=>r.json())));
+const LABEL={verified:'검증됨',partial:'부분 확인',unverified:'미확인',conflict:'충돌',claude:'Claude 리서치 기준',estimate:'추정치'};
+const badge=s=>s?`<span class="badge ${s}">${LABEL[s]||s}</span>`:'';
+const ids=[];const ref=l=>(l||[]).map(id=>{let i=ids.indexOf(id);if(i<0){ids.push(id);i=ids.length-1;}return `<a class="sref" href="#src-hybe-${i+1}" title="${esc(sources[id]?.title)}">[${i+1}]</a>`}).join('');
+const n=v=>v==null?'—':Math.round(v).toLocaleString('ko-KR');
+const usd=v=>v>=1e9?'$'+(v/1e9).toFixed(2)+'B':'$'+(v/1e6).toFixed(1)+'M';
+const tbl=(head,rows)=>'<thead><tr>'+head.map(h=>`<th>${h}</th>`).join('')+'</tr></thead><tbody>'+rows.map(r=>'<tr>'+r.map(c=>`<td>${c}</td>`).join('')+'</tr>').join('')+'</tbody>';
+$('#hyTitle').textContent=H.title;$('#hyIntro').textContent=H.intro;
+const labels=[...new Set(H.tours.map(t=>t.label))];
+$('#hyLabel').innerHTML='<button data-v="all" class="on">전 레이블</button>'+labels.map(l=>`<button data-v="${esc(l)}">${esc(l)}</button>`).join('');
+let lab='all',st='all',q='';
+const stCls={'진행 중':'verified','예정':'forecast','종료':'partial'};
+// 표 머리글과 출처 번호를 먼저 확정(필터와 무관하게 번호 고정)
+H.tours.forEach(t=>ref(t.sources));
+function draw(){
+ const rows=H.tours.filter(t=>(lab==='all'||t.label===lab)&&(st==='all'||(st==='2027'?t.y2027:t.state===st))&&(!q||(t.artist+t.tour+t.label).toLowerCase().includes(q)));
+ const sum=k=>rows.reduce((a,t)=>a+(t[k]||0),0);
+ const shows=sum('shows'),done=sum('done'),att=sum('attendance'),gross=sum('gross');
+ $('#hyCards').innerHTML=[['투어·공연',rows.length+'건'],['총 공연 수(일정 포함)',n(shows)+'회'],['완료 공연(확인분)',n(done)+'회'],['관객 보고분 합계',n(att)+'명'],['매출 보고분 합계',gross?usd(gross):'—']].map(c=>`<div class="card"><div class="k">${c[0]}</div><div class="v">${c[1]}</div></div>`).join('');
+ $('#hyTable').innerHTML=tbl(['레이블','아티스트','투어','유형','기간','지역·도시','공연','완료','잔여','관객','매출','상태','검증'],rows.map(t=>[
+  esc(t.label),`<b>${esc(t.artist)}</b>`,esc(t.tour)+(t.note?`<span class="note">${esc(t.note)}</span>`:''),esc(t.kind),esc(t.period),esc(t.regions)+(t.cities?`<span class="note">${t.cities}개 도시</span>`:''),
+  t.shows==null?'미확인':n(t.shows),t.done==null?'미확인':n(t.done),t.left==null?'미확인':n(t.left),
+  esc(t.attendanceText||'미확인'),esc(t.grossText||'미확인'),`<span class="badge ${stCls[t.state]||''}">${esc(t.state)}</span>`,badge(t.status)+ref(t.sources)]));
+ $('#hyCount').textContent=`${rows.length}/${H.tours.length}건 표시 · 합계 카드는 출처 있는 보고분 단순 합(집계 범위가 서로 달라 투어 총량이 아님). 미확인은 0으로 합산하지 않고 제외.`;
+ if(window.kSort){const s=$('#hyTable');s.tBodies[0]&&delete s.tBodies[0].dataset.ksorted;}
+}
+const seg=(id,cb)=>$(id).addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;[...$(id).children].forEach(x=>x.classList.toggle('on',x===b));cb(b.dataset.v);});
+seg('#hyLabel',v=>{lab=v;draw();});seg('#hyState',v=>{st=v;draw();});$('#hySearch').addEventListener('input',e=>{q=e.target.value.trim().toLowerCase();draw();});
+draw();
+const C=H.company;
+$('#hyCompany').innerHTML=`<h2 style="margin-top:36px">HYBE 회사 차원 공연 지표</h2><h3>분기별 공연 매출 (단위: ${esc(C.unit)})</h3><div class="tablewrap"><table class="data">${tbl(['분기','공연 매출(억원)','증감','검증','비고'],C.quarters.map(r=>[`<b>${esc(r[0])}</b>`,n(r[1]),esc(r[2]),badge(r[3])+ref(r[5]),esc(r[4])]))}</table></div>
+<h3>공연 횟수·관객 관련 공시</h3><div class="tablewrap"><table class="data">${tbl(['항목','값','검증'],C.stats.map(r=>[`<b>${esc(r[0])}</b>`,esc(r[1]),badge(r[2])+ref(r[3])]))}</table></div>`;
+$('#hyRoster').innerHTML=`<h3>레이블별 현재 상태 (2026-10-04 KST)</h3><div class="tablewrap"><table class="data">${tbl(['레이블','아티스트','투어 상태','검증'],H.roster.map(r=>[esc(r[0]),`<b>${esc(r[1])}</b>`,esc(r[2]),badge(r[3])+ref(r[4])]))}</table></div>`;
+$('#hyUnver').innerHTML=`<h3>미확인·주의 사항</h3><ul class="list small">${H.unverified.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`;
+const el=$('#src-hybe');el.innerHTML='<h4>출처</h4><ol>'+ids.map((id,i)=>{const s=sources[id]||{title:id,url:''};return `<li id="src-hybe-${i+1}">${s.url?`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>`:esc(s.title)}</li>`}).join('')+'</ol>';
+})();

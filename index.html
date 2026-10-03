@@ -17,6 +17,7 @@
   <nav class="wrap tabs" id="tabs" role="tablist">
     <a href="#tours" data-tab="tours">투어 박스스코어</a>
     <a href="#tracker" data-tab="tracker">해외 투어 트래커</a>
+    <a href="#hybe" data-tab="hybe">하이브 투어</a>
     <a href="#events" data-tab="events">공연·시상식</a>
     <a href="#rpd" data-tab="rpd">랜덤플레이댄스</a>
     <a href="#auditions" data-tab="auditions">오디션</a>
@@ -188,6 +189,24 @@
     <div class="srcbox" id="src-brands"></div>
   </section>
 
+  <section id="sec-hybe" class="sec" data-sec="hybe" hidden>
+    <h2 id="hyTitle">하이브 투어</h2>
+    <p class="muted" id="hyIntro"></p>
+    <div class="controls">
+      <div class="seg" id="hyLabel"></div>
+    </div>
+    <div class="controls">
+      <div class="seg" id="hyState"><button data-v="all" class="on">전체</button><button data-v="진행 중">진행 중</button><button data-v="예정">예정</button><button data-v="종료">종료(2025–26)</button><button data-v="2027">2027 일정 포함</button></div>
+      <input type="search" id="hySearch" placeholder="아티스트/투어 검색">
+    </div>
+    <div class="cards" id="hyCards"></div>
+    <div class="tablewrap"><table class="data" id="hyTable"></table></div>
+    <p class="muted small" id="hyCount"></p>
+    <div id="hyCompany"></div>
+    <div id="hyRoster"></div>
+    <div id="hyUnver"></div>
+    <div class="srcbox" id="src-hybe"></div>
+  </section>
   <section id="sec-log" class="sec" data-sec="log" hidden>
     <h2>업데이트 로그</h2>
     <ul class="list" id="logList"></ul>
