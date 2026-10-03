@@ -463,31 +463,71 @@
      "sources": [
       "CLAUDE-CHATS-2"
      ]
+    },
+    {
+     "k": "수상 (2026)",
+     "v": "대한민국 퍼스트브랜드 대상 여자아이돌 라이징스타, K 월드 드림 어워즈 베스트 팬상 / 2025 미니 3집 ‘lip bomb’ 포브스 ‘2025 비평가 호평 K-팝 앨범’ (Claude 대시보드 요약)",
+     "status": "claude",
+     "sources": [
+      "CLAUDE-FC"
+     ]
     }
    ],
    "timeline": [
     {
+     "date": "2026-01-21",
+     "text": "‘Pinball’ 일본어 버전",
+     "status": "claude",
+     "sources": [
+      "CLAUDE-FC"
+     ]
+    },
+    {
+     "date": "2026-02-27",
+     "text": "AA Project 컬래버 ‘Busy Boy’",
+     "status": "claude",
+     "sources": [
+      "CLAUDE-FC"
+     ]
+    },
+    {
+     "date": "2026-04-08",
+     "text": "첫 디지털 싱글 ‘Runaway’",
+     "status": "claude",
+     "sources": [
+      "CLAUDE-FC"
+     ]
+    },
+    {
+     "date": "2026-06",
+     "text": "수원시 MZ 타깃 브랜딩 콘텐츠 참여",
+     "status": "claude",
+     "sources": [
+      "CLAUDE-FC"
+     ]
+    },
+    {
+     "date": "2026-07",
+     "text": "‘LOVE ATTACK’(2024-08 미니 1집 SCENEDROME 타이틀) 발매 2년 만에 멜론 TOP100 1위 — 일간 2위, FLO 2위, 지니 실시간 3위. 원이 유튜브 채널 갸루·사투리 밈이 계기 (문화일보 07-09·스포츠경향 07-13 보도 요약)",
+     "status": "claude",
+     "sources": [
+      "CLAUDE-FC"
+     ]
+    },
+    {
      "date": "2026-07-08",
-     "text": "‘Pretty Girl’ 리메이크 발매",
+     "text": "카라 ‘Pretty Girl’(2008) 리메이크 싱글 — 향 콘셉트 ‘자몽’, 컴백 라이브 3만 명+, 엠카 첫 무대 니콜 합류 (스포츠경향·일간스포츠 요약)",
      "status": "claude",
      "sources": [
-      "CLAUDE-CHATS-1"
+      "CLAUDE-FC"
      ]
     },
     {
-     "date": "2026",
-     "text": "‘LOVE ATTACK’ 멜론 TOP100 역주행",
+     "date": "2026-09-01",
+     "text": "9월 신인 아이돌 브랜드평판 1위 (한국기업평판연구소, 8/1~9/1 빅데이터 1,973만 건) — 2위 코르티스, 3위 키키 (셀럽미디어·K trendy NEWS 요약)",
      "status": "claude",
      "sources": [
-      "CLAUDE-CHATS-1"
-     ]
-    },
-    {
-     "date": "2026-09",
-     "text": "9월 신인 브랜드평판 1위",
-     "status": "claude",
-     "sources": [
-      "CLAUDE-CHATS-1"
+      "CLAUDE-FC"
      ]
     },
     {
@@ -500,15 +540,16 @@
     },
     {
      "date": "2026-09-26",
-     "text": "OBJET K-POP FESTA(9/26–27) 취소",
+     "text": "OBJET K-POP FESTA(9/26–27) 주최 측 사정으로 취소 (공식 Mnet Plus 공지 요약)",
      "status": "claude",
      "sources": [
-      "CLAUDE-CHATS-1"
+      "CLAUDE-FC"
      ]
     }
    ],
    "pending": [],
-   "withheld": "건강·다이어트 관련 대화(9/15)는 실존 인물의 체중·식단에 관한 내용이라, 1차 출처 URL로 확인되기 전까지 게재하지 않음."
+   "withheld": "건강·다이어트 관련 대화(9/15)는 실존 인물의 체중·식단에 관한 내용이라, 1차 출처 URL로 확인되기 전까지 게재하지 않음.",
+   "artifacts": "출처: Claude ‘개인 K-pop 대시보드’(knowledge-dash, 9/19) 처리 노트 6건 — 원 보도 URL 미포함."
   },
   {
    "id": "bts",
@@ -668,6 +709,38 @@
      ]
     }
    ]
+  },
+  {
+   "id": "blackpink",
+   "name": "BLACKPINK (블랙핑크)",
+   "type": "girl",
+   "facts": [
+    {
+     "k": "‘JUMP’ 사운드 분석 (Claude 2025-08-01)",
+     "v": "하드스타일 기반 EDM에 테크노·드릴·유로댄스·트랜스 혼합. 웨스턴 영화음악풍 기타 리프 인트로 → 고에너지 일렉트로닉, 1997년 레이브곡 ‘Meet Her at the Loveparade’를 연상시키는 후렴, 랩·반말투 벌스에서 폭발적 후렴으로 빌드업",
+     "status": "claude",
+     "sources": [
+      "CLAUDE-FC"
+     ]
+    },
+    {
+     "k": "‘JUMP’ 프로듀서",
+     "v": "Diplo, 24, Boaz van de Beatz, Zecca, Ape Drums (Claude가 Rolling Stone 인용)",
+     "status": "claude",
+     "sources": [
+      "CLAUDE-FC"
+     ]
+    },
+    {
+     "k": "멤버 인스타그램",
+     "v": "‘유튜브·SNS’ 탭 참조",
+     "status": "verified",
+     "sources": [
+      "LIVECOUNTS-LJ"
+     ]
+    }
+   ],
+   "timeline": []
   }
  ],
  "ambassadors": {
@@ -1223,7 +1296,7 @@
  },
  "fanEvents": {
   "title": "정국 생일(9/1) 글로벌 팬 이벤트 (Claude 8/31)",
-  "status": "claude",
+  "status": "estimate",
   "sources": [
    "CLAUDE-CHATS-2"
   ],

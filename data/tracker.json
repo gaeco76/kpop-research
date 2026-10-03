@@ -35,7 +35,9 @@
     "CL-BB-SKZ",
     "CL-KH-SKZ",
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": null,
+   "estimateText": null
   },
   {
    "artist": "블랙핑크",
@@ -70,7 +72,9 @@
     "TD-BP-DEADLINE",
     "CLAUDE-TRACKER",
     "CLAUDE-CHATS-1"
-   ]
+   ],
+   "estimate": null,
+   "estimateText": null
   },
   {
    "artist": "세븐틴",
@@ -100,7 +104,9 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 700000,
+   "estimateText": "~ 70만"
   },
   {
    "artist": "세븐틴",
@@ -133,7 +139,9 @@
     "CL-YNA-SVT",
     "CLAUDE-TRACKER",
     "BB-YE2025"
-   ]
+   ],
+   "estimate": null,
+   "estimateText": null
   },
   {
    "artist": "아이브",
@@ -160,12 +168,14 @@
     "name": "Live Nation",
     "url": "https://www.livenation.com/"
    },
-   "note": "Claude 8/29 회장 규모 모델(추정): 약 40만 명 (KSPO 3회 31,500 / 교세라+도쿄돔 4회 160,000 / 아시아 9회 81,000 / 오세아니아 2회 20,000 / 북미 아레나 8회 109,600). 초기 대화: 교세라 79,000 + 도쿄돔 48,000.",
+   "note": "추정 관객(≈40만) 산식 (KSPO 3회 31,500 / 교세라+도쿄돔 4회 160,000 / 아시아 9회 81,000 / 오세아니아 2회 20,000 / 북미 아레나 8회 109,600). 초기 대화: 교세라 79,000 + 도쿄돔 48,000.",
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER",
     "CLAUDE-CHATS-1"
-   ]
+   ],
+   "estimate": 402000,
+   "estimateText": "≈ 40만"
   },
   {
    "artist": "베이비몬스터",
@@ -195,7 +205,9 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": null,
+   "estimateText": null
   },
   {
    "artist": "르세라핌",
@@ -229,7 +241,9 @@
     "TD-LSF-ECH",
     "SINA-LSF-ECH",
     "CLAUDE-CHATS-1"
-   ]
+   ],
+   "estimate": null,
+   "estimateText": null
   },
   {
    "artist": "에스파",
@@ -260,7 +274,9 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 321500,
+   "estimateText": "≈ 32만"
   },
   {
    "artist": "NCT 드림",
@@ -291,7 +307,9 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 402000,
+   "estimateText": "≈ 40만"
   },
   {
    "artist": "투모로우바이투게더",
@@ -321,7 +339,9 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 600000,
+   "estimateText": "~ 60만"
   },
   {
    "artist": "투모로우바이투게더",
@@ -352,7 +372,9 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 280000,
+   "estimateText": "~ 28만"
   },
   {
    "artist": "에이티즈",
@@ -385,7 +407,9 @@
     "KQ-ATEEZ",
     "BB-YE2025",
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 600000,
+   "estimateText": "~ 60만"
   },
   {
    "artist": "엔하이픈",
@@ -415,7 +439,9 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 350000,
+   "estimateText": "~ 35만"
   },
   {
    "artist": "지드래곤",
@@ -445,7 +471,9 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 600000,
+   "estimateText": "~ 60만"
   },
   {
    "artist": "제이홉",
@@ -475,7 +503,9 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 400000,
+   "estimateText": "~ 40만"
   },
   {
    "artist": "데이식스",
@@ -507,7 +537,9 @@
     "NME-DAY6",
     "SOOMPI-DAY6",
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 300000,
+   "estimateText": "~ 30만"
   },
   {
    "artist": "라이즈",
@@ -538,7 +570,9 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 270000,
+   "estimateText": "~ 27만"
   },
   {
    "artist": "엔믹스",
@@ -569,7 +603,9 @@
    "sources": [
     "LN-NMIXX",
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": null,
+   "estimateText": null
   },
   {
    "artist": "있지",
@@ -602,7 +638,9 @@
     "KH-ITZY2",
     "SOOMPI-ITZY",
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 180000,
+   "estimateText": "~ 18만"
   },
   {
    "artist": "스테이씨",
@@ -634,7 +672,9 @@
     "SOOMPI-STAYC",
     "SN-STAYC",
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 80000,
+   "estimateText": "~ 8만"
   },
   {
    "artist": "BTS",
@@ -673,7 +713,9 @@
     "WIKI-ARIRANG",
     "CLAUDE-CHATS-1",
     "TD-BTS"
-   ]
+   ],
+   "estimate": null,
+   "estimateText": null
   },
   {
    "artist": "빅뱅",
@@ -704,7 +746,9 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 738000,
+   "estimateText": "≈ 74만"
   },
   {
    "artist": "에스파",
@@ -731,12 +775,14 @@
     "name": "Ticketmaster",
     "url": "https://www.ticketmaster.com/"
    },
-   "note": "Claude 8/29 회장 규모 모델(추정): 약 34만 명 (고척 2회 36,000 / 타이베이돔 18,000 / 상파울루 ~25,000 / 북미 8회 112,000 / 파리 아코르 15,000 / 미발표 13회 130,000). 미국 9/15–10/11 10개 도시, 유럽 2027년 1–2월 (Claude 9/18).",
+   "note": "추정 관객(≈34만) 산식 (고척 2회 36,000 / 타이베이돔 18,000 / 상파울루 ~25,000 / 북미 8회 112,000 / 파리 아코르 15,000 / 미발표 13회 130,000). 미국 9/15–10/11 10개 도시, 유럽 2027년 1–2월 (Claude 9/18).",
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER",
     "CLAUDE-CHATS-1"
-   ]
+   ],
+   "estimate": 336000,
+   "estimateText": "≈ 34만"
   },
   {
    "artist": "스트레이 키즈",
@@ -768,7 +814,9 @@
    "sources": [
     "CL-KH-SKZ",
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 535000,
+   "estimateText": "≈ 54만"
   },
   {
    "artist": "베이비몬스터",
@@ -799,13 +847,15 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 363500,
+   "estimateText": "≈ 36만"
   },
   {
    "artist": "르세라핌",
    "tour": "Pureflow Tour",
    "start": "2026-07-11",
-   "end": "2026-12-06",
+   "end": "2026-12-20",
    "yearHint": "2026",
    "shows": 34,
    "cities": null,
@@ -825,13 +875,16 @@
     "name": "Weverse",
     "url": "https://weverse.io/"
    },
-   "note": "북미 9회 9/16–10/8 (LA·타코마·새너제이·피닉스·포트워스·올랜도·시카고·워싱턴DC·뉴어크), 유럽 5회 10/16 런던–10/26 베를린(위키 확인). Claude 추정 관객 약 33만(7/13 모델)~40만(8/30).",
-   "changes": "Claude(8/30·7/13)는 23개 도시·32회라 해 트래커 34회와 충돌 — 최종 회차 공식 집계 미확인.",
+   "note": "북미 9회 9/16–10/8 (LA·타코마·새너제이·피닉스·포트워스·올랜도·시카고·워싱턴DC·뉴어크), 유럽 5회 10/16 런던–10/26 베를린(위키 확인). 마지막 공연: 교세라돔 오사카 12/19–20 (공식).",
+   "changes": "Claude(8/30·7/13)는 23개 도시·32회라 해 트래커 34회와 충돌 — 최종 회차 공식 집계 미확인. / 2026-10-04: 종료일 12-06(07 검증표 값) → 12-20 교세라돔 오사카(12/19–20, 공식 9/3 발표)로 갱신.",
    "sources": [
     "CLAUDE-TRACKER",
     "WIKI-PUREFLOW",
-    "CLAUDE-CHATS-1"
-   ]
+    "CLAUDE-CHATS-1",
+    "LSF-JP-KYOCERA"
+   ],
+   "estimate": 357000,
+   "estimateText": "≈ 36만"
   },
   {
    "artist": "트와이스",
@@ -861,7 +914,9 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 360000,
+   "estimateText": "≈ 36만"
   },
   {
    "artist": "투모로우바이투게더",
@@ -892,7 +947,9 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 472000,
+   "estimateText": "≈ 47만"
   },
   {
    "artist": "엔하이픈",
@@ -922,7 +979,9 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 176000,
+   "estimateText": "≈ 18만"
   },
   {
    "artist": "아일릿",
@@ -952,7 +1011,9 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 90000,
+   "estimateText": "≈ 9만"
   },
   {
    "artist": "아일릿",
@@ -982,7 +1043,9 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 40000,
+   "estimateText": "≈ 4만"
   },
   {
    "artist": "아이들",
@@ -1013,7 +1076,9 @@
    "sources": [
     "CL-KH-IDLE",
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 135000,
+   "estimateText": "≈ 14만"
   },
   {
    "artist": "케이츠아이",
@@ -1046,7 +1111,9 @@
     "LN-KATSEYE",
     "CONSEQ-KATSEYE",
     "CLAUDE-CHATS-1"
-   ]
+   ],
+   "estimate": 120000,
+   "estimateText": "≈ 12만"
   },
   {
    "artist": "몬스타엑스",
@@ -1076,7 +1143,9 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 51000,
+   "estimateText": "≈ 5.1만"
   },
   {
    "artist": "마마무",
@@ -1106,7 +1175,9 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 35000,
+   "estimateText": "≈ 3.5만"
   },
   {
    "artist": "XG",
@@ -1136,7 +1207,9 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 35000,
+   "estimateText": "≈ 3.5만"
   },
   {
    "artist": "리사",
@@ -1166,7 +1239,9 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 16000,
+   "estimateText": "≈ 1.6만"
   },
   {
    "artist": "제로베이스원",
@@ -1196,7 +1271,9 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": null,
+   "estimateText": null
   },
   {
    "artist": "플레이브",
@@ -1226,7 +1303,9 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 60000,
+   "estimateText": "≈ 6만"
   },
   {
    "artist": "보이넥스트도어",
@@ -1256,7 +1335,9 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 257500,
+   "estimateText": "≈ 26만"
   },
   {
    "artist": "보이넥스트도어",
@@ -1286,7 +1367,9 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 160000,
+   "estimateText": "~ 16만"
   },
   {
    "artist": "키스오브라이프",
@@ -1316,7 +1399,9 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 112500,
+   "estimateText": "≈ 11만"
   },
   {
    "artist": "NCT 위시",
@@ -1347,7 +1432,9 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 200000,
+   "estimateText": "~ 20만"
   },
   {
    "artist": "엑소",
@@ -1377,7 +1464,9 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 170000,
+   "estimateText": "~ 17만"
   },
   {
    "artist": "샤이니",
@@ -1407,7 +1496,9 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 170000,
+   "estimateText": "~ 17만"
   },
   {
    "artist": "더보이즈",
@@ -1437,7 +1528,9 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 180000,
+   "estimateText": "~ 18만"
   },
   {
    "artist": "데이식스",
@@ -1467,7 +1560,9 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 240000,
+   "estimateText": "~ 24만"
   },
   {
    "artist": "피원하모니",
@@ -1498,7 +1593,9 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 150000,
+   "estimateText": "~ 15만"
   },
   {
    "artist": "트레저",
@@ -1531,7 +1628,9 @@
     "YGEX-TREASURE",
     "YG-TREASURE",
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": null,
+   "estimateText": null
   },
   {
    "artist": "TWS",
@@ -1565,7 +1664,9 @@
     "HYBEJP-TWS",
     "WEVERSE-TWS-MACAU",
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 110000,
+   "estimateText": "~ 11만"
   },
   {
    "artist": "코르티스",
@@ -1595,7 +1696,9 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 50000,
+   "estimateText": "~ 5만"
   },
   {
    "artist": "에버글로우",
@@ -1625,7 +1728,9 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 30000,
+   "estimateText": "~ 3만"
   },
   {
    "artist": "원어스",
@@ -1655,7 +1760,9 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 50000,
+   "estimateText": "~ 5만"
   },
   {
    "artist": "&TEAM",
@@ -1685,7 +1792,9 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 120000,
+   "estimateText": "~ 12만"
   },
   {
    "artist": "이즈나",
@@ -1718,7 +1827,9 @@
     "SOOMPI-IZNA",
     "IZNA-JP",
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 30000,
+   "estimateText": "~ 3만"
   },
   {
    "artist": "우즈",
@@ -1748,7 +1859,9 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 80000,
+   "estimateText": "~ 8만"
   },
   {
    "artist": "유니스",
@@ -1778,7 +1891,9 @@
    "changes": "",
    "sources": [
     "CLAUDE-TRACKER"
-   ]
+   ],
+   "estimate": 20000,
+   "estimateText": "~ 2만"
   }
  ],
  "records": [
@@ -1789,10 +1904,15 @@
    "region": "다지역",
    "shows": 88,
    "attendance": 5200000,
-   "attendanceText": "약 520만",
+   "attendanceText": "500만~540만",
    "estimate": true,
-   "note": "2026-08-11 박스스코어 38회 230만 기준. 잔여 50회 회당 5.5~6.1만 외삽. 공식 아님 — Billboard 9/30 기준 매출 $500M+ 돌파로 진행분 갱신됨",
-   "status": "partial"
+   "note": "07 검증표(8/29) 추정: 진행 38회 230만 + 잔여 50회 외삽 → 최종 500~540만·$8.8~9.8억. 정렬값은 중앙 520만. Claude 01 대화의 권역별 재계산은 약 453만(440~510만)·$8.17억. 공식 아님 — 실적은 Billboard 9/30 기준 매출 $500M+ 돌파.",
+   "status": "estimate",
+   "sources": [
+    "CLAUDE-07",
+    "BB-BTS-0930",
+    "CLAUDE-FC"
+   ]
   },
   {
    "kind": "tour",
@@ -1827,7 +1947,7 @@
    "attendance": 1800000,
    "attendanceText": "1,800,000",
    "estimate": false,
-   "note": "2022~23년 완료. 매출 3억 3천만 달러로 케이팝 투어 최대 매출",
+   "note": "2022~23년 완료. 매출 3억 3천만 달러로 케이팝 투어 최대 매출 · 07 검증표 $330M, Claude 01 대화는 Billboard 기준 $331.8M이라 함 (07 값 유지)",
    "status": "claude"
   },
   {
@@ -1899,8 +2019,8 @@
    "attendance": 400000,
    "attendanceText": "약 40만",
    "estimate": true,
-   "note": "아레나 회당 1.2만 명 가정. 그룹 첫 유럽 공연 포함",
-   "status": "partial"
+   "note": "아레나 회당 1.2만 명 가정. 그룹 첫 유럽 공연 포함 · Claude 모델 간 편차: 36만(트래커 8/29)·40만(8/30 비교표)·33만(7/13 수익 계산)",
+   "status": "estimate"
   },
   {
    "kind": "tour",
@@ -2373,8 +2493,148 @@
   "날짜 미정 행: 에버글로우, 원어스, &TEAM, 우즈, 유니스(전체), NCT 위시·피원하모니·라이즈(시작일), 베이비몬스터·아일릿 앙코르·보이넥스트도어·엑소·샤이니·더보이즈·코르티스·지드래곤(종료일)",
   "BTS ARIRANG: 08-11 기준 $433.2M/38회 + 8월 $171.7M/12회 합과 Wikipedia $637.5M/50회가 정확히 맞지 않음(집계 기간 중복 추정) — 공식 누적치 대기",
   "RUN IT 투어 전체 회차·관객, 르세라핌 Pureflow 관객(Claude 40만은 추정)",
-  "LE SSERAFIM Pureflow 최종 회차: 34회(트래커) vs 32회(Claude) 충돌",
   "KATSEYE Wildworld 총 공연 수 미확인",
-  "aespa Parallel Line 최종 관객: 454,000(38/43회) vs 52만(Claude ‘공식’) 충돌"
- ]
+  "aespa Parallel Line 최종 관객: 454,000(38/43회) vs 52만(Claude ‘공식’) 충돌",
+  "LE SSERAFIM Pureflow 최종 회차: 34회(트래커) vs 32회(Claude 8/30) vs 36회(Claude 위키 아티팩트) — 교세라돔 2회 추가 반영 여부 미확인"
+ ],
+ "estimateNote": "‘추정 관객’ 열은 Claude 트래커 아티팩트(8/29)의 모델값: ≈ = 공연장 단위·체급 혼합 모델, ~ = 회차까지 가정한 러프 추정(±50%). 공식 집계 아님 — 실집계는 ‘관객’ 열.",
+ "btsMonthly": {
+  "title": "BTS ARIRANG 월간 박스스코어",
+  "status": "partial",
+  "rows": [
+   {
+    "month": "2026-04",
+    "shows": 8,
+    "att": 417000,
+    "gross": 76200000,
+    "rank": "월간 1위",
+    "status": "partial",
+    "sources": [
+     "BB-BTS-APR",
+     "CLAUDE-FC"
+    ]
+   },
+   {
+    "month": "2026-05",
+    "shows": 12,
+    "att": 641000,
+    "gross": 127800000,
+    "rank": "월간 1위",
+    "status": "claude",
+    "sources": [
+     "CLAUDE-FC"
+    ]
+   },
+   {
+    "month": "2026-07",
+    "shows": 8,
+    "att": 582000,
+    "gross": 120500000,
+    "rank": "월간 2위",
+    "status": "claude",
+    "sources": [
+     "CLAUDE-FC"
+    ]
+   },
+   {
+    "month": "2026-08",
+    "shows": 12,
+    "att": 801000,
+    "gross": 171700000,
+    "rank": "월간 박스스코어 역대 2위",
+    "status": "verified",
+    "sources": [
+     "BB-BTS-0930"
+    ]
+   }
+  ],
+  "note": "4·5·7월은 Claude 01 대화가 Billboard 월간 보고를 인용한 값(4월만 링크 확인). 8월은 Billboard 9/30 보고. 권역별 회당 평균(Claude 인용, Outlook Respawn): 미국 58,400명·$12.1M, 아시아 44,500명·$7.1M. 기록(스타뉴스 인용): 보컬 그룹 역대 최고 매출 투어, 아시아 아티스트 최고 매출(Born Pink 경신), 자체 최다 관객(LY:SY 2,019,800명) 경신.",
+  "sources": [
+   "BB-BTS-APR",
+   "BB-BTS-0930",
+   "RESPAWN-BTS",
+   "CL-STARNEWS-BTS",
+   "CLAUDE-FC"
+  ]
+ },
+ "westStatus": {
+  "title": "걸그룹 미주·유럽 투어 현황 (Claude 9/18 기준)",
+  "status": "claude",
+  "sources": [
+   "CLAUDE-FC"
+  ],
+  "columns": [
+   "그룹",
+   "투어",
+   "미주 구간",
+   "유럽 구간",
+   "상태(9/18)"
+  ],
+  "rows": [
+   [
+    "LE SSERAFIM",
+    "PUREFLOW",
+    "9.16~10.8, 9회 (LA·터코마·산호세·피닉스·포트워스·올랜도·시카고·워싱턴DC·뉴어크)",
+    "10.16 런던 → 10.18 암스테르담 → 10.21 파리 → 10.23 코펜하겐 → 10.26 베를린",
+    "미주 진행 중, 유럽 첫 진출"
+   ],
+   [
+    "aespa",
+    "SYNK : COMPLæXITY",
+    "9.15~10.11 (해밀턴·벨몬트파크·워싱턴DC·애틀랜타·마이애미·댈러스·LA·오클랜드·시애틀·밴쿠버)",
+    "2027년 1~2월 (맨체스터·런던·베를린·파리 2027-02-02 폐막)",
+    "미주 진행 중"
+   ],
+   [
+    "KATSEYE",
+    "THE WILDWORLD TOUR",
+    "10.13 마이애미 ~ 11.27–28 멕시코시티",
+    "9.1 더블린 ~ 9.17 코펜하겐 (런던 O2 2회·맨체스터·파리·암스테르담·쾰른·안트베르펜)",
+    "유럽 종료, 미주 대기"
+   ],
+   [
+    "ITZY",
+    "TUNNEL VISION",
+    "미발표",
+    "9.11 런던 → 9.13 암스테르담 → 9.15 파리 → 9.17 프랑크푸르트",
+    "유럽 종료"
+   ],
+   [
+    "TWICE",
+    "THIS IS FOR",
+    "1.9 밴쿠버 ~ 3월, 20개 도시",
+    "5월 ~ 6.3 런던 O2 (리스본·바르셀로나·파리·베를린·쾰른·암스테르담)",
+    "종료 (42개 지역 56회)"
+   ],
+   [
+    "IVE",
+    "SHOW WHAT I AM",
+    "7.21 토론토 ~ 8.9 밴쿠버, 8개 도시",
+    "없음",
+    "미주 종료"
+   ],
+   [
+    "NMIXX",
+    "EPISODE 1: ZERO FRONTIER",
+    "3월 말~4월 (토론토·브루클린·내셔널하버·어빙·오클랜드·LA)",
+    "3월 중순 (마드리드·암스테르담·파리·프랑크푸르트·런던)",
+    "종료"
+   ],
+   [
+    "BABYMONSTER",
+    "춤 (CHOOM)",
+    "추후 발표",
+    "추후 발표",
+    "6.26 서울 개막, 아시아·오세아니아만 확정"
+   ],
+   [
+    "BLACKPINK",
+    "DEADLINE",
+    "Claude: 미주 20개 도시 35회·북미 약 55만 (공식 16도시 33회와 충돌 → 미반영)",
+    "스타드 드 프랑스 등",
+    "2026-01 종료"
+   ]
+  ],
+  "note": "Claude 대화가 ‘9월 중순 4팀 동시 서구권 아레나’ 구간으로 정리. 르세라핌 12/19–20 교세라돔 폐막은 공식 확인됨. KATSEYE는 마농 휴식·소피아 유럽 구간 불참 (Claude 대화 기준)."
+ }
 }

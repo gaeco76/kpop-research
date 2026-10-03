@@ -118,6 +118,106 @@
    "requirements.txt",
    "songs.example.csv",
    ".gitignore"
-  ]
+  ],
+  "benchStatus": "estimate",
+  "options": [
+   [
+    "--fps",
+    "5",
+    "초당 분석 프레임 (높을수록 정확·느림)"
+   ],
+   [
+    "--model",
+    "yolo11s.pt",
+    "인원이 많고 멀면 yolo11m.pt"
+   ],
+   [
+    "--device",
+    "mps",
+    "Mac=mps, NVIDIA=0, 기타=cpu"
+   ],
+   [
+    "--conf",
+    "0.35",
+    "YOLO 검출 신뢰도"
+   ],
+   [
+    "--imgsz",
+    "960",
+    "추론 이미지 크기"
+   ],
+   [
+    "--min-len",
+    "8",
+    "이보다 짧은 구간(초)은 곡으로 보지 않음"
+   ],
+   [
+    "--min-samples",
+    "5",
+    "이보다 적게 잡힌 사람은 잡음 처리"
+   ],
+   [
+    "--motion-ref / --shape-ref",
+    "0.06 / 0.10",
+    "움직임·형태 점수 기준 (튜닝 대상)"
+   ],
+   [
+    "--threshold",
+    "0.5",
+    "댄서 판정 기준 점수"
+   ],
+   [
+    "--band",
+    "0.35 0.65",
+    "Jev로 보낼 애매 점수 범위"
+   ],
+   [
+    "--trim",
+    "0.15",
+    "곡 앞뒤 입장·퇴장 구간 제외 비율"
+   ],
+   [
+    "--pct",
+    "90",
+    "프레임별 인원 중 대표값 퍼센타일"
+   ],
+   [
+    "--jev / --jev-model / --jev-batch",
+    "off / jev-latest / 20",
+    "애매한 사람만 곡 단위 배치로 Jev 재판정"
+   ],
+   [
+    "--segments",
+    "—",
+    "챕터 없는 영상용 곡 구간 CSV (시작시각,곡명)"
+   ],
+   [
+    "--debug-frames",
+    "off",
+    "곡마다 중간 장면에 판정(초록=댄서, 회색=관객) 표시"
+   ]
+  ],
+  "outputs": "runs/<영상ID>/results.md · results.csv · results.json · debug/*.jpg · detections.jsonl(YOLO 추적 캐시 — 튜닝 시 삭제 금지) · jev_last_response.json",
+  "tuning": [
+   "관객이 댄서로 잡힘 → --motion-ref/--shape-ref·--threshold 올림",
+   "댄서 누락 → 반대로 내림",
+   "인원 과대 → --pct 낮춤, --trim 늘림",
+   "캐시 재사용으로 재실행, 사용자가 센 정답과의 오차(MAE)를 표로 보고",
+   "Jev는 산술 없이 ‘댄서인가’ 의미 판단만 — 숫자는 describe()에서 범주 단어로 변환"
+  ],
+  "install": "Mac mini M4: brew install ffmpeg → uv venv → uv pip install -r requirements.txt / Jev(선택): uv tool install jev-cli → jev auth set",
+  "bot": {
+   "title": "RPD 통계 봇 PR #3 — 곡명 정규화 버그 수정 (Claude Code)",
+   "status": "claude",
+   "sources": [
+    "CLAUDE-FC"
+   ],
+   "items": [
+    "원인: ‘ver’·‘mv’·‘audio’ 등을 부분 문자열로 삭제 → ‘Fever’→‘fe’, ‘Lover’→‘lo’, ‘Forever’→‘fore’",
+    "제목이 ‘Audio’뿐이면 빈 문자열 → 곡 구간 누락, 서로 다른 곡이 같은 키로 합쳐질 위험, 별칭 ‘fever’ 미매칭",
+    "수정: 제목 끝 단독 단어(Official MV, ver. 등)만 제거, 결과가 비면 원래 값 유지, 회귀 테스트 추가",
+    "테스트 48건 통과 (CI 결과·실제 수집·YOLO 실행은 Mac mini에서 미확인)"
+   ]
+  }
  }
 }

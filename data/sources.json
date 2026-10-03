@@ -426,5 +426,37 @@
  "ST-BTS-LUX": {
   "title": "The Straits Times — BTS comeback year is a fashion bonanza",
   "url": "https://www.straitstimes.com/life/style/the-boys-are-back-bts-comeback-year-is-a-fashion-bonanza"
+ },
+ "CLAUDE-FC": {
+  "title": "사용자 claude.ai K-pop 자료 패키지 (대화 본문·아티팩트, 수집 2026-10-04) — Claude 추정 포함",
+  "url": ""
+ },
+ "CLAUDE-07": {
+  "title": "Claude 투어 트래커 검증본 ‘07 검증’ 탭 (2026-08-29 패스, 사용자 제공)",
+  "url": ""
+ },
+ "LSF-JP-KYOCERA": {
+  "title": "LE SSERAFIM 일본 공식 — PUREFLOW IN KYOCERA DOME OSAKA 개최 결정 (2026-09-03, 12/19–20)",
+  "url": "https://www.le-sserafim.jp/news/0fbf87ba1d6c"
+ },
+ "SOOMPI-LOLLA26": {
+  "title": "Soompi — Jennie, aespa, i-dle, CORTIS To Perform At Lollapalooza 2026 (2026-03-17)",
+  "url": "https://www.soompi.com/article/1825661wpp/jennie-aespa-i-dle-and-cortis-to-perform-at-lollapalooza-2026"
+ },
+ "KT-JENNIE-LOLLA": {
+  "title": "The Korea Times(연합) — Jennie to headline Lollapalooza Chicago (2026-03-18)",
+  "url": "https://www.koreatimes.co.kr/entertainment/k-pop/20260318/jennie-to-headline-lollapalooza-chicago"
+ },
+ "KT-COACHELLA26": {
+  "title": "The Korea Times — Coachella 2026 lineup features BIGBANG, Taemin, KATSEYE",
+  "url": "https://www.koreatimes.co.kr/entertainment/music/20250918/coachella-2026-lineup-features-bigbang-reunion-taemin-katseye"
+ },
+ "BB-BTS-APR": {
+  "title": "Billboard — BTS monthly touring report: comeback shows (4월 8회 41.7만·$76.2M, Claude 대화 인용)",
+  "url": "https://www.billboard.com/pro/bts-monthly-touring-report-comeback-shows/"
+ },
+ "RESPAWN-BTS": {
+  "title": "Outlook India Respawn — BTS Arirang $124M, 권역별 회당 평균 (Claude 대화 인용)",
+  "url": "https://respawn.outlookindia.com/pop-culture/pop-culture-news/bts-arirang-world-tour-124m-billboard-top-touring-act-2026-bts-top-touring-act-2026-arirang-tour-bts-highest-grossing-kpop-tour-2026"
  }
 }

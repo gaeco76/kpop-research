@@ -16,7 +16,7 @@ const state={};
 function sortTable(table,col,dir){
  const tb=table.tBodies[0];if(!tb)return;
  const rows=[...tb.rows].filter(r=>r.cells.length>col&&!r.querySelector('td[colspan]'));
- const pinned=rows.filter(r=>/^(합계|총계|Total)$/.test(txt(r.cells[0])));
+ const pinned=rows.filter(r=>/^(합계|총계|Total)/.test(txt(r.cells[0])));
  const body=rows.filter(r=>!pinned.includes(r));
  const vals=body.map(r=>txt(r.cells[col]));const ne=vals.filter(v=>!EMPTY.test(v));
  const type=ne.length&&ne.every(v=>dateKey(v)!=null)?'date':ne.length&&ne.every(v=>numKey(v)!=null)?'num':'text';

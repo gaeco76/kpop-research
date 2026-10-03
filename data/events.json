@@ -501,5 +501,167 @@
     "results": []
    }
   ]
+ },
+ "festivals2026": {
+  "title": "2026 해외 대형 음악 페스티벌 K-pop 출연 (Claude 9/9 조사)",
+  "asOf": "2026-09-09",
+  "sources": [
+   "CLAUDE-FC"
+  ],
+  "columns": [
+   "페스티벌",
+   "시기·장소",
+   "K-pop 출연",
+   "등급",
+   "검증"
+  ],
+  "rows": [
+   [
+    "Lollapalooza South America",
+    "3월, 아르헨티나·칠레·브라질",
+    "RIIZE (3개국 전 일정)",
+    "라인업",
+    "claude"
+   ],
+   [
+    "Coachella",
+    "4/10–12·4/17–19, 미국 인디오",
+    "KATSEYE(금), 태민(토), BIGBANG 3인(일, 20주년) / 리사(Anyma 게스트, Claude 기준)",
+    "라인업(양 주차)",
+    "verified"
+   ],
+   [
+    "Governors Ball",
+    "6/5–7, 뉴욕",
+    "KATSEYE, Stray Kids, 제니",
+    "헤드라이너 2팀",
+    "claude"
+   ],
+   [
+    "Mawazine",
+    "6/23, 모로코 라바트",
+    "ITZY",
+    "헤드라이너",
+    "claude"
+   ],
+   [
+    "Mad Cool",
+    "7월, 스페인",
+    "제니",
+    "헤드라이너",
+    "claude"
+   ],
+   [
+    "Lollapalooza Chicago",
+    "7/30–8/2, 시카고 그랜트파크",
+    "제니(헤드라이너), aespa, i-dle, CORTIS",
+    "헤드라이너 1팀",
+    "verified"
+   ],
+   [
+    "Hinterland",
+    "7/30, 미국 아이오와",
+    "KATSEYE",
+    "라인업",
+    "claude"
+   ],
+   [
+    "Head in the Clouds",
+    "8/8, 미국 패서디나",
+    "KATSEYE",
+    "라인업",
+    "claude"
+   ],
+   [
+    "Rock in Rio Brazil",
+    "9/11, 리우",
+    "Stray Kids(헤드라이너), 화사, NEXZ",
+    "헤드라이너 1팀",
+    "claude"
+   ]
+  ],
+  "rowSources": {
+   "Coachella": [
+    "KT-COACHELLA26"
+   ],
+   "Lollapalooza Chicago": [
+    "SOOMPI-LOLLA26",
+    "KT-JENNIE-LOLLA"
+   ]
+  },
+  "girls": [
+   [
+    "KATSEYE",
+    "5",
+    "Coachella, Governors Ball, Hinterland, Head in the Clouds",
+    "4",
+    "WILDWORLD 투어 사전 노출"
+   ],
+   [
+    "aespa",
+    "4",
+    "Lollapalooza Chicago",
+    "1",
+    "COMPLæXITY 북미 구간 직전"
+   ],
+   [
+    "i-dle",
+    "4",
+    "Lollapalooza Chicago",
+    "1",
+    "취소된 북중미 투어 대체"
+   ],
+   [
+    "ITZY",
+    "4",
+    "Mawazine",
+    "1",
+    "미개척 지역 단발 진입(헤드라이너)"
+   ],
+   [
+    "IVE",
+    "4",
+    "확인된 2026 대형 페스티벌 없음",
+    "0",
+    "2025년 Lollapalooza Chicago·Paris 출연"
+   ],
+   [
+    "LE SSERAFIM",
+    "4",
+    "확인된 2026 대형 페스티벌 없음",
+    "0",
+    "36회 투어 집중"
+   ],
+   [
+    "BABYMONSTER",
+    "5",
+    "없음",
+    "0",
+    "단독 투어 우선"
+   ]
+  ],
+  "milestones": [
+   [
+    "2016",
+    "에픽하이, 한국 아티스트 최초 Coachella"
+   ],
+   [
+    "2022",
+    "TXT, K-pop 그룹 최초 Lollapalooza Chicago / 제이홉 헤드라이너(약 10만 5천 관객)"
+   ],
+   [
+    "2023",
+    "BLACKPINK, BST Hyde Park 헤드라이너 / Stray Kids, Lollapalooza Paris 헤드라이너"
+   ],
+   [
+    "2025",
+    "TWICE, 걸그룹 최초 Lollapalooza Chicago 헤드라이너"
+   ],
+   [
+    "2026",
+    "제니, 한국 여성 솔로 최초 Lollapalooza 헤드라이너 / 태민, K-pop 남성 솔로 최초 Coachella / RIIZE, 보이그룹 최초 Lollapalooza 남미"
+   ]
+  ],
+  "note": "Coachella·Lollapalooza Chicago 행은 보도로 확인, 나머지는 Claude 대화 기준. BST Hyde Park 2026 K-pop 출연은 확인 안 됨. Glastonbury·Primavera·Summer Sonic·Sziget는 미조사(출연 없음 아님). 출연료 비공개 — 경제성은 구조 설명뿐."
  }
 }
