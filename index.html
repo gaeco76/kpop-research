@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>K-pop 리서치 — 투어·시상식·오디션·아티스트</title>
+<meta name="description" content="K-pop 투어 박스스코어, 2026 TMA, 오디션, 아티스트 비교 리서치 (출처 포함)">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230071e3'/><text x='32' y='42' font-size='28' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='700'>K</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap head">
+    <h1>K-pop 리서치</h1>
+    <span class="updated" id="lastUpdated">마지막 업데이트: …</span>
+  </div>
+  <nav class="wrap tabs" id="tabs" role="tablist">
+    <a href="#tours" data-tab="tours">투어 박스스코어</a>
+    <a href="#events" data-tab="events">공연·시상식</a>
+    <a href="#rpd" data-tab="rpd">랜덤플레이댄스</a>
+    <a href="#auditions" data-tab="auditions">오디션</a>
+    <a href="#artists" data-tab="artists">아티스트 비교</a>
+    <a href="#log" data-tab="log">업데이트 로그</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="legend">
+    <span class="badge verified">검증됨</span> 웹 출처로 확인
+    <span class="badge partial">부분 확인</span> 일부만 확인
+    <span class="badge grok">Grok 대화 기준</span> 과거 대화 내용(외부 미검증)
+    <span class="badge unverified">미확인</span> 확인 불가/출처 불일치
+  </div>
+
+  <section id="sec-tours" class="sec" data-sec="tours">
+    <h2>단일 투어 박스스코어 (명목 총매출)</h2>
+    <p class="muted" id="tourDef"></p>
+    <div class="controls">
+      <div class="seg" id="tourSort">
+        <button data-k="gross" class="on">총매출</button>
+        <button data-k="attendance">관객</button>
+        <button data-k="shows">회차</button>
+        <button data-k="perShowAtt">회당 관객</button>
+        <button data-k="perShowGross">회당 매출</button>
+      </div>
+      <input type="search" id="tourSearch" placeholder="아티스트/투어 검색">
+      <label class="chk"><input type="checkbox" id="kOnly"> K-pop만</label>
+    </div>
+    <div class="cards" id="tourStats"></div>
+    <div class="tablewrap"><table id="tourTable" class="data"></table></div>
+    <p class="muted small">† 진행 중 투어. 헤더 클릭으로도 정렬 가능(다시 클릭 시 오름/내림 전환). 회당 수치 = 총합 ÷ 회차(직접 계산). 관객 수가 없는 투어는 관객 정렬 시 맨 아래.</p>
+    <h3>주요 마일스톤</h3>
+    <ul class="list" id="milestones"></ul>
+    <div class="srcbox" id="src-tours"></div>
+  </section>
+
+  <section id="sec-events" class="sec" data-sec="events" hidden>
+    <h2 id="tmaTitle"></h2>
+    <div class="cards" id="tmaInfo"></div>
+    <h3>타임테이블</h3>
+    <div class="tablewrap"><table class="data" id="tmaSchedule"></table></div>
+    <h3>출연 라인업 (17팀)</h3>
+    <div class="chips" id="tmaLineup"></div>
+    <h3>무대 구성·순서</h3>
+    <p class="muted" id="tmaOrderNote"></p>
+    <div class="tablewrap"><table class="data" id="tmaStages"></table></div>
+    <h3>수상자</h3>
+    <div class="tablewrap"><table class="data" id="tmaWinners"></table></div>
+    <p class="muted small" id="tmaVideo"></p>
+    <div class="srcbox" id="src-events"></div>
+  </section>
+
+  <section id="sec-rpd" class="sec" data-sec="rpd" hidden>
+    <h2>랜덤플레이댄스 곡별 댄서 수·조회수</h2>
+    <p id="rpdSummary"></p>
+    <div class="grid2">
+      <div class="card"><h3>파이프라인</h3><ol id="rpdPipe"></ol></div>
+      <div class="card"><h3>실행 명령</h3><pre id="rpdCmd"></pre><p class="small muted" id="rpdOut"></p></div>
+      <div class="card"><h3>조정 파라미터</h3><ul id="rpdTune"></ul></div>
+      <div class="card"><h3>한계·향후 과제</h3><ul id="rpdLim"></ul></div>
+    </div>
+    <h3>결과</h3>
+    <div class="tablewrap"><table class="data" id="rpdTable"></table></div>
+    <p class="muted small" id="rpdNote"></p>
+    <div class="srcbox" id="src-rpd"></div>
+  </section>
+
+  <section id="sec-auditions" class="sec" data-sec="auditions" hidden>
+    <h2>K-pop 오디션·서바이벌 지형</h2>
+    <div class="tablewrap"><table class="data" id="audTable"></table></div>
+    <h3 id="hiTitle"></h3>
+    <div class="tablewrap"><table class="data" id="hiTable"></table></div>
+    <h3>참고</h3>
+    <ul class="list" id="audNotes"></ul>
+    <div class="srcbox" id="src-auditions"></div>
+  </section>
+
+  <section id="sec-artists" class="sec" data-sec="artists" hidden>
+    <h2 id="cmpTitle"></h2>
+    <div class="tablewrap"><table class="data cmp" id="cmpTable"></table></div>
+    <h3>해석·포인트</h3>
+    <ul class="list" id="cmpInsights"></ul>
+    <h2 id="grpTitle"></h2>
+    <div class="chips" id="grpList"></div>
+    <ul class="list" id="grpFacts"></ul>
+    <div class="srcbox" id="src-artists"></div>
+  </section>
+
+  <section id="sec-log" class="sec" data-sec="log" hidden>
+    <h2>업데이트 로그</h2>
+    <ul class="list" id="logList"></ul>
+    <h3>전체 출처 목록</h3>
+    <ol class="srcall" id="srcAll"></ol>
+  </section>
+</main>
+<footer class="wrap foot">데이터는 <code>data/*.json</code>에서 관리됩니다. 수치는 집계 시점·기관에 따라 다를 수 있습니다.</footer>
+<script src="app.js"></script>
+</body>
+</html>

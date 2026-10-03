@@ -1,0 +1,53 @@
+{
+  "summary": "YouTube 랜덤플레이댄스(RPD) 영상에서 곡별 참여 댄서 수를 근사 추정하는 도구 (Jev + Claude Code). 정확한 인원이 아닌 범위(예: 6–8명)로 출력.",
+  "status": "grok",
+  "pipeline": [
+    "영상 설명/챕터에서 곡 타임스탬프 파싱",
+    "카운트다운 3초 제외",
+    "곡당 8프레임 샘플링",
+    "YOLO 사람 박스 검출 (중심·크기·ROI 유지)",
+    "인접 프레임 간 움직임으로 댄서 분류",
+    "평균/최소/최대 출력 — 중앙에서 움직이는 사람만 집계, 가장자리 대기 인원·스태프·원거리 소형 박스 제외"
+  ],
+  "commands": [
+    "cd kpop-rpd-counter",
+    "python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt",
+    "python main.py --url \"YouTubeURL\" --meta-only   # 메타/챕터만",
+    "python main.py --url \"YouTubeURL\"               # 실제 추정",
+    "python main.py --video clip.mp4 --desc examples/sample_description.txt",
+    "python main.py --demo                           # 파서 데모"
+  ],
+  "outputs": [
+    "output/rpd_counts.csv",
+    "output/rpd_counts.json"
+  ],
+  "tunables": [
+    "margin_x",
+    "motion_threshold",
+    "samples_per_song",
+    "min_box_h_ratio (원거리 안무 시 낮춤)"
+  ],
+  "limits": [
+    "챕터/곡명 없으면 --desc 필요",
+    "줌 변화가 motion score에 영향",
+    "개인 ID 추적 없음 → 중복 집계 가능 (향후 ByteTrack 예정)",
+    "향후: 곡명 OCR, 박스 미리보기 저장"
+  ],
+  "results": [
+    {
+      "time": "0:45",
+      "song": "BLACKPINK - Kill This Love",
+      "dancers": "2 (예시 출력)",
+      "views": "미확인",
+      "status": "grok"
+    },
+    {
+      "time": "3:08",
+      "song": "IVE - LOVE DIVE",
+      "dancers": "6 (예시 출력)",
+      "views": "미확인",
+      "status": "grok"
+    }
+  ],
+  "note": "Grok 대화에는 실제 영상 조회수 데이터가 없음. 조회수 및 실측 결과는 도구 실행 후 이 파일의 results에 추가하세요 (영상 URL·조회 일시 함께 기록)."
+}

@@ -1,0 +1,254 @@
+{
+  "tma2026": {
+    "name": "2026 THE FACT MUSIC AWARDS (TMA) — 제9회",
+    "date": "2026-09-19 (토)",
+    "venue": "부산 아시아드 주경기장 (부산 첫 개최, 3년 만의 국내 개최)",
+    "schedule": [
+      {
+        "time": "16:00",
+        "item": "블루카펫 (MC 재재)",
+        "status": "verified",
+        "sources": [
+          "TMA-SPECIAL",
+          "TMA-RESULT"
+        ]
+      },
+      {
+        "time": "18:00",
+        "item": "본식 (MC 전현무·서현)",
+        "status": "verified",
+        "sources": [
+          "TMA-SPECIAL",
+          "TMA-SBS"
+        ]
+      },
+      {
+        "time": "15:00",
+        "item": "입장 시작",
+        "status": "grok",
+        "sources": [
+          "GROK"
+        ]
+      },
+      {
+        "time": "~22:00",
+        "item": "종료 예상 (약 240분)",
+        "status": "grok",
+        "sources": [
+          "GROK"
+        ]
+      }
+    ],
+    "broadcast": "국내 치지직 단독 생중계, 일본 니코니코 생방송, 기타 지역 Hello Live",
+    "lineup": [
+      "RIIZE",
+      "RESCENE",
+      "xikers",
+      "IDID",
+      "ILLIT",
+      "ALPHA DRIVE ONE",
+      "EVAN",
+      "ATEEZ",
+      "NMIXX",
+      "ALLDAY PROJECT",
+      "임영웅",
+      "YENA",
+      "CORTIS",
+      "CLOSE YOUR EYES",
+      "KiiiKiii",
+      "TREASURE",
+      "tripleS"
+    ],
+    "lineupSources": [
+      "TMA-SBS",
+      "TMA-RESULT"
+    ],
+    "orderNote": "공식 분 단위 러닝오더는 공개되지 않음. 오프닝(CLOSE YOUR EYES·tripleS·xikers)만 공식 기사로 확인. 이후 순서는 Grok 대화(직캠·빌리빌리 기반) 기준.",
+    "stages": [
+      {
+        "order": "오프닝",
+        "artist": "CLOSE YOUR EYES",
+        "stage": "NCT DREAM 'Beat It Up' 커버 + 4th 미니 수록곡 선공개",
+        "status": "verified",
+        "sources": [
+          "TMA-SBS",
+          "TMA-RESULT"
+        ]
+      },
+      {
+        "order": "오프닝",
+        "artist": "tripleS",
+        "stage": "aespa 'LEMONADE' 커버",
+        "status": "verified",
+        "sources": [
+          "TMA-SBS",
+          "TMA-RESULT"
+        ]
+      },
+      {
+        "order": "오프닝",
+        "artist": "xikers",
+        "stage": "BTS 'Hooligan' 커버 + 미공개곡 첫 무대",
+        "status": "verified",
+        "sources": [
+          "TMA-SBS",
+          "TMA-RESULT"
+        ]
+      },
+      {
+        "order": "4 (Grok)",
+        "artist": "RESCENE",
+        "stage": "LOVE ATTACK (오케스트라 버전)",
+        "status": "grok",
+        "sources": [
+          "GROK"
+        ]
+      },
+      {
+        "order": "5 (Grok)",
+        "artist": "ALLDAY PROJECT",
+        "stage": "WICKED + ONE MORE TIME",
+        "status": "grok",
+        "sources": [
+          "GROK"
+        ]
+      },
+      {
+        "order": "6 (Grok)",
+        "artist": "ILLIT",
+        "stage": "NOT CUTE ANYMORE + It's Me",
+        "status": "grok",
+        "sources": [
+          "GROK"
+        ]
+      },
+      {
+        "order": "7 (Grok)",
+        "artist": "YENA",
+        "stage": "인트로 + Catch Catch",
+        "status": "grok",
+        "sources": [
+          "GROK"
+        ]
+      },
+      {
+        "order": "8 (Grok)",
+        "artist": "CORTIS",
+        "stage": "RED RED",
+        "status": "grok",
+        "sources": [
+          "GROK"
+        ]
+      },
+      {
+        "order": "9 (Grok)",
+        "artist": "ATEEZ",
+        "stage": "Adrenaline + MAMACITA(첫 공개) + BAD — 미공개곡 첫 무대는 공식 확인, 곡명은 Grok 기준",
+        "status": "partial",
+        "sources": [
+          "TMA-SBS",
+          "GROK"
+        ]
+      },
+      {
+        "order": "10 (Grok)",
+        "artist": "임영웅",
+        "stage": "'영원한 순간(Make the Moment Eternal)' + '행복하길(Please Be Happy)'",
+        "status": "verified",
+        "sources": [
+          "TMA-RESULT",
+          "TMA-SPECIAL"
+        ]
+      },
+      {
+        "order": "11 (Grok)",
+        "artist": "Busan-z (TREASURE 지훈 + KiiiKiii 지유)",
+        "stage": "윤하 '혜성(Comet)' 듀엣",
+        "status": "verified",
+        "sources": [
+          "TMA-RESULT",
+          "TMA-SBS"
+        ]
+      },
+      {
+        "order": "미확인",
+        "artist": "RIIZE, NMIXX, TREASURE, IDID, ALPHA DRIVE ONE, EVAN, KiiiKiii (본무대)",
+        "stage": "곡목 미확인",
+        "status": "unverified",
+        "sources": [
+          "TMA-RESULT"
+        ]
+      }
+    ],
+    "winners": [
+      {
+        "award": "Icon of the Year (대상)",
+        "winner": "ATEEZ"
+      },
+      {
+        "award": "Sound of the Year (대상)",
+        "winner": "NMIXX"
+      },
+      {
+        "award": "Muse of the Year (대상)",
+        "winner": "RIIZE"
+      },
+      {
+        "award": "Record of the Year (대상)",
+        "winner": "CORTIS"
+      },
+      {
+        "award": "World Best Performer",
+        "winner": "TREASURE"
+      },
+      {
+        "award": "Artist of the Year",
+        "winner": "ATEEZ, TREASURE, NMIXX, RIIZE, ILLIT, RESCENE, KiiiKiii, ALLDAY PROJECT, CORTIS, ALPHA DRIVE ONE, YENA"
+      },
+      {
+        "award": "World Best Wave",
+        "winner": "EVAN"
+      },
+      {
+        "award": "Global Hot Trend",
+        "winner": "tripleS, CLOSE YOUR EYES"
+      },
+      {
+        "award": "Next Leader",
+        "winner": "CORTIS, ALPHA DRIVE ONE"
+      },
+      {
+        "award": "Hottest",
+        "winner": "xikers, IDID"
+      },
+      {
+        "award": "TMA 인기상 / 심사위원 특별상",
+        "winner": "임영웅"
+      },
+      {
+        "award": "Today's Choice",
+        "winner": "RESCENE"
+      },
+      {
+        "award": "팬앤스타 초이스 그룹 / 솔로",
+        "winner": "BTS / 이찬원"
+      },
+      {
+        "award": "Best Music 봄·여름 / 가을 / 겨울",
+        "winner": "BTS / PLAVE / 이찬원"
+      },
+      {
+        "award": "Global Hot Star",
+        "winner": "PLAVE"
+      },
+      {
+        "award": "My Star Award (남/여)",
+        "winner": "BTS 진 / NMIXX 설윤"
+      }
+    ],
+    "winnerSources": [
+      "TMA-RESULT"
+    ],
+    "video": "Grok 대화 기준 빌리빌리 영상: 본식 전체 약 3시간 58분, 전 무대 모음 약 1시간 48분, 레드카펫+무대 약 4시간 59분 (링크 미확인)"
+  }
+}
