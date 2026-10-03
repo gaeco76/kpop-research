@@ -64,3 +64,9 @@ select{font:inherit;font-size:13.5px;padding:6px 10px;border:1px solid var(--lin
 #trkTable td:nth-child(2){min-width:170px} #trkTable td:nth-child(5){min-width:150px} #trkTable td:last-child{min-width:280px}
 #trkTable td:nth-child(3),#trkTable td:nth-child(4){white-space:nowrap}
 #recTable{min-width:900px} #recTable td:nth-child(8){min-width:260px}
+/* 공용 정렬 헤더 */
+table.ks thead th{cursor:pointer;user-select:none;white-space:nowrap}
+table.ks thead th::after{content:' ↕';opacity:.3;font-size:.85em}
+table.ks thead th.ks-asc::after{content:' ▲';opacity:1;color:var(--blue,#0071e3)}
+table.ks thead th.ks-desc::after{content:' ▼';opacity:1;color:var(--blue,#0071e3)}
+table.ks thead th:hover{background:rgba(0,113,227,.06)}
