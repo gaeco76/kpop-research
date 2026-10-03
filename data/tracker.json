@@ -62,13 +62,14 @@
     "name": "Ticketmaster",
     "url": "https://www.ticketmaster.com/"
    },
-   "note": "YG 발표 16도시 33회(2025-07-05 고양 ~ 2026-01-26 홍콩 카이탁). 총관객·총매출은 Billboard/Touring Data 미보고(TBA, 0/29 보고).",
+   "note": "YG 발표 16도시 33회(2025-07-05 고양 ~ 2026-01-26 홍콩 카이탁). 총관객·총매출은 Billboard/Touring Data 미보고(TBA, 0/29 보고). Claude 9/18은 ‘미국 20개 도시·35회·북미 약 55만 명’이라 했으나 공식 16도시 33회와 충돌 → 미반영.",
    "changes": "2026-10-04 재조사: 총량 여전히 미공개. SNS에 도는 ‘163만·$277.9M’은 추정치라 미반영. 81회·200만+는 삭제 유지.",
    "sources": [
     "CL-CHOSUN-BP",
     "HERALD-BP10",
     "TD-BP-DEADLINE",
-    "CLAUDE-TRACKER"
+    "CLAUDE-TRACKER",
+    "CLAUDE-CHATS-1"
    ]
   },
   {
@@ -159,10 +160,11 @@
     "name": "Live Nation",
     "url": "https://www.livenation.com/"
    },
-   "note": "",
+   "note": "Claude 8/29 회장 규모 모델(추정): 약 40만 명 (KSPO 3회 31,500 / 교세라+도쿄돔 4회 160,000 / 아시아 9회 81,000 / 오세아니아 2회 20,000 / 북미 아레나 8회 109,600). 초기 대화: 교세라 79,000 + 도쿄돔 48,000.",
    "changes": "",
    "sources": [
-    "CLAUDE-TRACKER"
+    "CLAUDE-TRACKER",
+    "CLAUDE-CHATS-1"
    ]
   },
   {
@@ -205,12 +207,12 @@
    "cities": null,
    "region": "아시아·북미",
    "tier": "돔",
-   "attendance": 237000,
-   "attendanceText": "237,000",
-   "revenue": null,
-   "revenueText": null,
+   "attendance": 237441,
+   "attendanceText": "237,441 (27/31회 보고)",
+   "revenue": 34149246,
+   "revenueText": "$34.1M (27/31회)",
    "claudeAcc": "확정",
-   "status": "verified",
+   "status": "partial",
    "group": "girl",
    "years": [
     "2025",
@@ -220,10 +222,13 @@
     "name": "Weverse",
     "url": "https://weverse.io/"
    },
-   "note": "",
-   "changes": "",
+   "note": "회당 평균 $1.26M·8,794명(Claude 계산). 시애틀 2025-09-17 $2.013M 커리어 하이는 Claude 대화 기준.",
+   "changes": "2026-10-04: 237,000 → Touring Data 237,441장·$34,149,246(27/31회 보고분). 2차 보도(Sina)는 31회 전체 321,073장이라 해 부분 확인으로 조정.",
    "sources": [
-    "CLAUDE-TRACKER"
+    "CLAUDE-TRACKER",
+    "TD-LSF-ECH",
+    "SINA-LSF-ECH",
+    "CLAUDE-CHATS-1"
    ]
   },
   {
@@ -656,13 +661,18 @@
     "name": "Ticketmaster",
     "url": "https://www.ticketmaster.com/"
    },
-   "note": "일정 88회·34도시(2027-03-16 종료). 관객 230만은 2026-08-11 기준 38회(스타뉴스 인용 Billboard).",
-   "changes": "Claude 트래커의 $433.2M(08-11, 38회)은 Billboard 2026-09-30 보고(‘$500M 돌파’)로 대체. Wikipedia는 $637.5M·50회로 표기(투어 박스스코어 탭 참조).",
+   "note": "일정 88회·34도시(2027-03-16 종료). 관객 230만은 2026-08-11 기준 38회(스타뉴스 인용 Billboard). Claude 8/29 전망(추정): 총 약 453만 명(440~510만)·$817M($770~970M), 지역 평균 미국 58,400명·$12.1M/회, 아시아 44,500명·$7.1M/회. Touring Data 스냅샷 32/88회 보고 $345.2M·1,881,618장(시점 차로 Billboard $433.2M과 다름, 참고).",
+   "changes": "Claude 트래커의 $433.2M(08-11, 38회)은 Billboard 2026-09-30 보고(‘$500M 돌파’)로 대체. Wikipedia는 $637.5M·50회로 표기(투어 박스스코어 탭 참조). / 2026-10-04 Claude 배치1 대조: Claude(8/29)는 85회·2027-03-14 종료 → 88회·불라칸 3/13·14·16 종료로 갱신(확인).",
    "sources": [
     "BB-BTS-0930",
     "CL-STARNEWS-BTS",
     "EDAILY-BTS",
-    "CLAUDE-TRACKER"
+    "CLAUDE-TRACKER",
+    "CM-BTS88",
+    "TM-PH-BTS",
+    "WIKI-ARIRANG",
+    "CLAUDE-CHATS-1",
+    "TD-BTS"
    ]
   },
   {
@@ -721,10 +731,11 @@
     "name": "Ticketmaster",
     "url": "https://www.ticketmaster.com/"
    },
-   "note": "",
+   "note": "Claude 8/29 회장 규모 모델(추정): 약 34만 명 (고척 2회 36,000 / 타이베이돔 18,000 / 상파울루 ~25,000 / 북미 8회 112,000 / 파리 아코르 15,000 / 미발표 13회 130,000). 미국 9/15–10/11 10개 도시, 유럽 2027년 1–2월 (Claude 9/18).",
    "changes": "",
    "sources": [
-    "CLAUDE-TRACKER"
+    "CLAUDE-TRACKER",
+    "CLAUDE-CHATS-1"
    ]
   },
   {
@@ -805,7 +816,7 @@
    "revenue": null,
    "revenueText": null,
    "claudeAcc": "부분",
-   "status": "partial",
+   "status": "conflict",
    "group": "girl",
    "years": [
     "2026"
@@ -814,10 +825,12 @@
     "name": "Weverse",
     "url": "https://weverse.io/"
    },
-   "note": "",
-   "changes": "",
+   "note": "북미 9회 9/16–10/8 (LA·타코마·새너제이·피닉스·포트워스·올랜도·시카고·워싱턴DC·뉴어크), 유럽 5회 10/16 런던–10/26 베를린(위키 확인). Claude 추정 관객 약 33만(7/13 모델)~40만(8/30).",
+   "changes": "Claude(8/30·7/13)는 23개 도시·32회라 해 트래커 34회와 충돌 — 최종 회차 공식 집계 미확인.",
    "sources": [
-    "CLAUDE-TRACKER"
+    "CLAUDE-TRACKER",
+    "WIKI-PUREFLOW",
+    "CLAUDE-CHATS-1"
    ]
   },
   {
@@ -1005,12 +1018,12 @@
   {
    "artist": "케이츠아이",
    "tour": "Wildworld 2026",
-   "start": "2026-10-13",
-   "end": "2026-11-27",
+   "start": "2026-09-01",
+   "end": "2026-11-28",
    "yearHint": "2026",
    "shows": null,
-   "cities": null,
-   "region": "북미",
+   "cities": 27,
+   "region": "유럽·북미·멕시코",
    "tier": "아레나",
    "attendance": null,
    "attendanceText": null,
@@ -1026,10 +1039,13 @@
     "name": "Ticketmaster",
     "url": "https://www.ticketmaster.com/"
    },
-   "note": "",
-   "changes": "",
+   "note": "총 공연 수 미확인 (Claude는 31회/32회 아레나로 가정, 회당 14,000–16,000명 매진 가정).",
+   "changes": "2026-10-04: 시작 10/13(북미) → 9/1 더블린(유럽 레그)부터, 종료 11/28 멕시코시티로 갱신. 유럽 8 + 북미 18 + 멕시코시티 ≈ 27개 도시.",
    "sources": [
-    "CLAUDE-TRACKER"
+    "CLAUDE-TRACKER",
+    "LN-KATSEYE",
+    "CONSEQ-KATSEYE",
+    "CLAUDE-CHATS-1"
    ]
   },
   {
@@ -1847,8 +1863,8 @@
    "attendance": 454000,
    "attendanceText": "454,000",
    "estimate": false,
-   "note": "2024~25년 완료, 매출 2,486만 달러",
-   "status": "claude"
+   "note": "2024~25년 완료, 매출 2,486만 달러 · 454,000은 43회 중 38회 집계(위키). Claude 8/30 첫 버전은 52만 명 ‘공식’이라 해 충돌.",
+   "status": "conflict"
   },
   {
    "kind": "tour",
@@ -1904,11 +1920,11 @@
    "label": "Easy Crazy Hot",
    "region": "다지역",
    "shows": 31,
-   "attendance": 237000,
-   "attendanceText": "237,000",
+   "attendance": 237441,
+   "attendanceText": "237,441",
    "estimate": false,
-   "note": "도쿄돔 2회 8만 명 포함. 2026년 2월 잠실 폐막",
-   "status": "claude"
+   "note": "도쿄돔 2회 8만 명 포함. 2026년 2월 잠실 폐막 · Touring Data 27/31회 보고분 $34.1M",
+   "status": "partial"
   },
   {
    "kind": "city",
@@ -2356,6 +2372,9 @@
   "Stray Kids dominATE 인천 앙코르 2회 관객·매출 미보고 (위키 약 6만은 미확인)",
   "날짜 미정 행: 에버글로우, 원어스, &TEAM, 우즈, 유니스(전체), NCT 위시·피원하모니·라이즈(시작일), 베이비몬스터·아일릿 앙코르·보이넥스트도어·엑소·샤이니·더보이즈·코르티스·지드래곤(종료일)",
   "BTS ARIRANG: 08-11 기준 $433.2M/38회 + 8월 $171.7M/12회 합과 Wikipedia $637.5M/50회가 정확히 맞지 않음(집계 기간 중복 추정) — 공식 누적치 대기",
-  "RUN IT 투어 전체 회차·관객, 르세라핌 Pureflow 관객(Claude 40만은 추정)"
+  "RUN IT 투어 전체 회차·관객, 르세라핌 Pureflow 관객(Claude 40만은 추정)",
+  "LE SSERAFIM Pureflow 최종 회차: 34회(트래커) vs 32회(Claude) 충돌",
+  "KATSEYE Wildworld 총 공연 수 미확인",
+  "aespa Parallel Line 최종 관객: 454,000(38/43회) vs 52만(Claude ‘공식’) 충돌"
  ]
 }

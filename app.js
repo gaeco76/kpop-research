@@ -156,3 +156,66 @@ $('#bbTable').innerHTML='<thead><tr><th>#</th><th>아티스트</th><th class="nu
 $('#trkOpen').innerHTML=trk.unresolved.map(x=>`<li>${badge('unverified')} ${esc(x)}</li>`).join('');
 $('#src-tracker').innerHTML='<h4>출처</h4><ol>'+ids.map((id,i)=>{const s=sources[id]||{title:id};return `<li id="src-tracker-${i+1}">${s.url?`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>`:esc(s.title)}</li>`}).join('')+'</ol>';
 })().catch(e=>console.error(e));
+
+// ===== Batch 1 (Claude 대화 병합): 시상식 캘린더 · 유튜브·SNS · 산업·수익 · RPD v2 · 아티스트 확장 =====
+(async function(){
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const [sources,events,social,ind,rpd,art]=await Promise.all(['sources','events','social','industry','rpd','artists'].map(n=>fetch('data/'+n+'.json?v='+Date.now()).then(r=>r.json())));
+const LABEL={verified:'검증됨',partial:'부분 확인',grok:'Grok 대화 기준',unverified:'미확인',forecast:'전망',conflict:'충돌',claude:'Claude 리서치 기준',pending:'배치 2 예정'};
+const badge=s=>s?`<span class="badge ${s==='pending'?'unverified':s}">${LABEL[s]||s}</span>`:'';
+function Reg(sec){const ids=[];return{ref:l=>(l||[]).map(id=>{let i=ids.indexOf(id);if(i<0){ids.push(id);i=ids.length-1;}return `<a class="sref" href="#src-${sec}-${i+1}" title="${esc(sources[id]?.title)}">[${i+1}]</a>`}).join(''),
+ render:el=>{el.innerHTML='<h4>출처</h4><ol>'+ids.map((id,i)=>{const s=sources[id]||{title:id,url:''};return `<li id="src-${sec}-${i+1}">${s.url?`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>`:esc(s.title)}</li>`}).join('')+'</ol>';}};}
+const n=v=>v==null?'<span class="muted">—</span>':Math.round(v).toLocaleString('ko-KR');
+const tbl=(head,rows)=>'<thead><tr>'+head.map(h=>`<th>${h}</th>`).join('')+'</tr></thead><tbody>'+rows.map(r=>'<tr>'+r.map(c=>`<td>${c}</td>`).join('')+'</tr>').join('')+'</tbody>';
+const seg=(id,cb)=>$(id).addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;[...$(id).children].forEach(x=>x.classList.toggle('on',x===b));cb(b.dataset.v);});
+
+// --- 시상식 캘린더 ---
+{const A=events.awards2026,R=Reg('awards');let st='all';
+ $('#awTitle').textContent=A.title; $('#awNote').textContent=A.note+' (기준일 '+A.asOf+')';
+ const draw=()=>{$('#awTable').innerHTML=tbl(['일정','시상식','장소','상태','라인업','결과·비고','검증'],A.events.filter(e=>st==='all'||e.state===st).map(e=>[`<b>${esc(e.date)}</b>`,esc(e.name),esc(e.venue),`<span class="badge ${e.state==='종료'?'verified':'forecast'}" style="opacity:.85">${esc(e.state)}</span>`,`<span class="small">${esc(e.lineup)}</span>`,(e.results.length?'<ul class="small" style="margin:0;padding-left:16px">'+e.results.map(x=>`<li>${esc(x)}</li>`).join('')+'</ul>':'')+(e.note?`<span class="note">${esc(e.note)}</span>`:''),badge(e.status)+R.ref(e.sources)]));R.render($('#src-awards'));};
+ seg('#awState',v=>{st=v;draw();});draw();}
+
+// --- 유튜브·SNS ---
+{const Y=social.youtube,R=Reg('social');let ty='girl',gen='all',sk='subs',asc=false;
+ $('#ytTitle').innerHTML=esc(Y.title)+' '+badge(Y.status)+R.ref(Y.sources); $('#ytSnap').textContent='스냅샷: '+Y.snapshot;
+ const TY={girl:'걸그룹',boy:'보이그룹',coed:'혼성'};
+ const COLS=[['rank','전체 순위',1],['group','그룹',0],['gen','세대',1],['company','소속사',0],['subs','구독자',1],['weekly','주간 증감',1]];
+ const draw=()=>{const q=$('#ytSearch').value.trim().toLowerCase();
+  let L=Y.rows.filter(r=>(ty==='all'||r.type===ty)&&(gen==='all'||String(r.gen)===gen)&&(!q||(r.group+' '+r.ko+' '+r.company).toLowerCase().includes(q)));
+  L.sort((a,b)=>{let x=a[sk],y=b[sk];if(typeof x==='string')return asc?x.localeCompare(y):y.localeCompare(x);return asc?x-y:y-x;});
+  const tot=L.reduce((s,r)=>s+r.subs,0);
+  $('#ytStats').innerHTML=[['표시 그룹',L.length+'팀'],['구독자 합계',(tot/1e6).toFixed(1)+'M'],['1위',L[0]?esc(L[0].ko):'—'],['주간 순증 합계',n(L.reduce((s,r)=>s+(r.weekly||0),0))]].map(([k,v])=>`<div class="card"><div class="k">${k}</div><div class="v">${v}</div></div>`).join('');
+  $('#ytTable').innerHTML='<thead><tr><th>#</th>'+COLS.map(([k,l])=>`<th data-k="${k}" style="cursor:pointer">${l}${sk===k?(asc?' ▲':' ▼'):''}</th>`).join('')+'</tr></thead><tbody>'+L.map((r,i)=>`<tr><td class="num">${i+1}</td><td class="num">${r.rank}</td><td><b>${esc(r.ko)}</b><span class="note">${esc(r.group)} · ${TY[r.type]}</span></td><td class="num">${r.gen}세대</td><td class="small">${esc(r.company)}</td><td class="num">${n(r.subs)}</td><td class="num">${r.weekly?(r.weekly>0?'+':'')+n(r.weekly):'<span class="muted">0</span>'}</td></tr>`).join('')+'</tbody>';
+  $('#ytTable').querySelectorAll('th[data-k]').forEach(th=>th.onclick=()=>{const k=th.dataset.k;if(sk===k)asc=!asc;else{sk=k;asc=k==='rank'||k==='gen'||k==='group'||k==='company';}draw();});};
+ seg('#ytType',v=>{ty=v;draw();});seg('#ytGen',v=>{gen=v;draw();});$('#ytSearch').addEventListener('input',draw);draw();
+ $('#ytNotes').innerHTML=Y.notes.map(x=>`<li>${esc(x)}</li>`).join('');
+ const I=social.instagram;$('#igTitle').textContent=I.title;
+ $('#igTable').innerHTML=tbl(['멤버','계정','팔로워','기준 시각','검증'],I.rows.map(r=>[`<b>${esc(r.member)}</b>`,esc(r.handle),`<span class="num">${esc(r.text)}</span>`,esc(r.asOf),badge(r.status)+R.ref(r.sources)]));
+ $('#igNotes').innerHTML=(I.notes||[]).map(x=>`<li>${esc(x)}</li>`).join('')+(I.others?`<li>비교(K-pop 개인 계정, 근사치): ${I.others.map(o=>esc(o.member)+' '+esc(o.text)).join(' · ')} ${badge('partial')}${R.ref(I.othersSources)}</li>`:'');
+ const M=social.multiGroup;$('#mgTitle').innerHTML=esc(M.title)+' '+badge(M.status)+R.ref(M.sources);
+ $('#mgTable').innerHTML=tbl(['멤버','소속 그룹'],M.rows.map(r=>[`<b>${esc(r.person)}</b>`,esc(r.groups)]));$('#mgNote').textContent=M.note;
+ R.render($('#src-social'));}
+
+// --- 산업·수익 ---
+{const R=Reg('industry');const won=v=>n(v)+'억';let h='';
+ const K=ind.kwda;h+=`<h3>${esc(K.title)} ${badge(K.status)}${R.ref(K.sources)}</h3><div class="tablewrap"><table class="data">${tbl(['항목','내용'],K.changes.map(c=>[`<b>${esc(c.k)}</b>`,esc(c.v)]))}</table></div><p><b>아티스트가 출연하는 이유(분석):</b> ${K.why.map(esc).join(' · ')}</p><p class="muted small">${esc(K.note)}</p>`;
+ const T=ind.tourEcon;h+=`<h3>${esc(T.title)} ${badge(T.status)}${R.ref(T.sources)}</h3><p class="small">가정: ${T.assumptions.map(esc).join(' / ')}</p>
+ <div class="tablewrap"><table class="data">${tbl(['그룹','세대','회차','관객','티켓','MD','스폰서','총매출','영업이익','이익률'],T.rows.concat([T.total]).map(r=>[`<b>${esc(r[0])}</b>`,r[1]?r[1]+'세대':'',n(r[2]),n(r[3]),won(r[4]),won(r[5]),won(r[6]),`<b>${won(r[7])}</b>`,won(r[8]),r[9]+'%']))}</table></div>
+ <div class="grid2"><div class="card"><h4>효율 지표</h4><table class="data">${tbl(['그룹','회당 매출','1인 객단가','평균 티켓','손익분기 점유율'],T.eff.map(r=>[esc(r[0]),r[1]+'억',n(r[2])+'원',n(r[3])+'원',r[4]+'%']))}</table></div>
+ <div class="card"><h4>지역별 가격·예매율 가정</h4><table class="data">${tbl(['지역','평균가','예매율'],T.prices.map(r=>r.map(esc)))}</table><h4>시나리오</h4><table class="data">${tbl(['시나리오','총매출','영업이익','이익률'],T.scenarios.map(r=>[r[0],won(r[1]),won(r[2]),r[3]+'%']))}</table></div></div><p class="muted small">${esc(T.caveat)}</p>`;
+ const C=ind.compare;h+=`<h3>${esc(C.title)} ${badge(C.status)}${R.ref(C.sources)}</h3><div class="tablewrap"><table class="data">${tbl(['투어','총매출 추정(티켓+MD)'],C.rows.map(r=>[esc(r[0]),won(r[1])]))}</table></div><p class="muted small">${esc(C.note)}</p>`;
+ const S=ind.lsf;h+=`<h3>${esc(S.title)} ${badge(S.status)}${R.ref(S.sources)}</h3><p class="small">${esc(S.actual)}</p><div class="tablewrap"><table class="data">${tbl(['지역','계산','티켓 매출'],S.model.map(r=>r.map(esc)))}</table></div><ul class="list small">${S.pnl.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`;
+ const M=ind.amort;h+=`<h3>${esc(M.title)} ${badge(M.status)}${R.ref(M.sources)}</h3><p class="small">${esc(M.base)}</p><div class="grid2"><div class="card"><table class="data">${tbl(['방법','상각액'],M.methods.map(r=>r.map(esc)))}</table></div><div class="card"><table class="data">${tbl(['공연 수','회당 상각'],M.perShow.map(r=>[r[0],'$'+n(r[1])]))}</table></div></div><p class="muted small">${esc(M.simple)}</p>`;
+ $('#indBody').innerHTML=h;R.render($('#src-industry'));}
+
+// --- RPD v2 ---
+{const V=rpd.v2,R=Reg('rpd2');if(V){$('#rpdV2').innerHTML=`<h3>${esc(V.title)} ${badge(V.status)}${R.ref(V.sources)}</h3><div class="grid2"><div class="card"><h4>단계</h4><ol>${V.steps.map(s=>`<li>${esc(s)}</li>`).join('')}</ol></div><div class="card"><h4>댄서 점수 가중치</h4><table class="data">${tbl(['신호','가중치'],V.weights.map(w=>[esc(w[0]),w[1]+'%']))}</table><p class="small">${esc(V.test)}</p></div></div><h4>실행</h4><pre>${esc(V.command)}</pre><h4>비용·시간 벤치마크</h4><div class="tablewrap"><table class="data">${tbl(['방식','토큰','소요'],V.bench.map(r=>r.map(esc)))}</table></div><p class="muted small">${esc(V.benchNote)} 산출물: ${V.artifacts.map(esc).join(', ')}</p>`;R.render($('#src-rpd2'));}}
+
+// --- 아티스트 확장 (배치 2 수용 구조) ---
+{const R=Reg('artists2');let h='<h2 style="margin-top:36px">아티스트 프로필</h2>';
+ (art.profiles||[]).forEach(p=>{h+=`<div class="card" style="margin-bottom:14px"><h3 style="margin-top:0">${esc(p.name)}</h3><table class="data">${tbl(['항목','내용','검증'],p.facts.map(f=>[`<b>${esc(f.k)}</b>`,esc(f.v),badge(f.status)+R.ref(f.sources)]))}</table><h4>타임라인</h4><ul class="list small">${p.timeline.map(t=>`<li><b>${esc(t.date)}</b> ${esc(t.text)} ${badge(t.status)}${R.ref(t.sources)}</li>`).join('')}</ul>${p.pending&&p.pending.length?`<p class="muted small">추가 예정: ${p.pending.map(esc).join(' · ')}</p>`:''}</div>`;});
+ const B=art.ambassadors;if(B){h+=`<h2>${esc(B.title)} ${badge(B.status)}${R.ref(B.sources)}</h2><p class="small">${esc(B.summary)}</p><div class="grid2"><div class="card"><h4>브랜드별 K-pop vs 해외</h4><table class="data">${tbl(['브랜드','K-pop','해외'],B.comparisons.map(r=>r.map(esc)))}</table></div><div class="card"><h4>스포츠 브랜드 예시</h4><table class="data">${tbl(['아티스트','브랜드'],B.examples.map(r=>r.map(esc)))}</table></div></div><p class="muted small">${esc(B.note)}</p>`;}
+ [art.memberChart,art.brandCollabs].forEach(x=>{if(!x)return;h+=`<h3>${esc(x.title)} ${badge(x.status)}</h3>`+(x.rows&&x.rows.length?`<div class="tablewrap"><table class="data">${tbl(x.columns||Object.keys(x.rows[0]),x.rows.map(r=>(Array.isArray(r)?r:Object.values(r)).map(esc)))}</table></div>`:`<p class="muted small">${esc(x.note)}</p>`);});
+ $('#artExt').innerHTML=h;R.render($('#src-artists2'));}
+})().catch(e=>{document.querySelector('main').insertAdjacentHTML('afterbegin','<p style="color:#c9302c">배치1 데이터 로드 실패: '+e.message+'</p>')});

@@ -1,396 +1,545 @@
 {
-  "compare": {
-    "title": "5세대 '입덕 요정' 4인 비교 — RESCENE 원이·미나미 / ILLIT 윤아·원희",
-    "columns": [
-      "RESCENE 원이",
-      "RESCENE 미나미",
-      "ILLIT 윤아",
-      "ILLIT 원희"
-    ],
-    "rows": [
-      {
-        "item": "본명",
-        "cells": [
-          {
-            "v": "정원이",
-            "status": "verified",
-            "sources": [
-              "FANDOM-WONI"
-            ]
-          },
-          {
-            "v": "이토 미나미",
-            "status": "verified",
-            "sources": [
-              "FANDOM-MINAMI"
-            ]
-          },
-          {
-            "v": "노윤아",
-            "status": "verified",
-            "sources": [
-              "DBKPOP-ILLIT"
-            ]
-          },
-          {
-            "v": "이원희",
-            "status": "verified",
-            "sources": [
-              "WIKI-WONHEE"
-            ]
-          }
-        ]
-      },
-      {
-        "item": "생년월일 (만 나이, 2026-10-04 기준)",
-        "cells": [
-          {
-            "v": "2004-05-25 (22)",
-            "status": "verified",
-            "sources": [
-              "FANDOM-WONI"
-            ]
-          },
-          {
-            "v": "2006-11-29 (19)",
-            "status": "verified",
-            "sources": [
-              "FANDOM-MINAMI"
-            ]
-          },
-          {
-            "v": "2004-01-15 (22)",
-            "status": "verified",
-            "sources": [
-              "DBKPOP-ILLIT"
-            ]
-          },
-          {
-            "v": "2007-06-26 (19)",
-            "status": "verified",
-            "sources": [
-              "WIKI-WONHEE"
-            ]
-          }
-        ]
-      },
-      {
-        "item": "출신",
-        "cells": [
-          {
-            "v": "경남 거제",
-            "status": "verified",
-            "sources": [
-              "FANDOM-WONI"
-            ]
-          },
-          {
-            "v": "일본 — 출처 불일치 (Grok: 지바 / Fandom: 나가사키 쓰시마) 미확인",
-            "status": "unverified",
-            "sources": [
-              "GROK",
-              "FANDOM-MINAMI"
-            ]
-          },
-          {
-            "v": "충북 충주",
-            "status": "verified",
-            "sources": [
-              "DBKPOP-ILLIT"
-            ]
-          },
-          {
-            "v": "부산 (Grok: 부산→창원)",
-            "status": "verified",
-            "sources": [
-              "WIKI-WONHEE"
-            ]
-          }
-        ]
-      },
-      {
-        "item": "키",
-        "cells": [
-          {
-            "v": "162–163cm",
-            "status": "grok",
-            "sources": []
-          },
-          {
-            "v": "162–164cm",
-            "status": "grok",
-            "sources": []
-          },
-          {
-            "v": "168cm",
-            "status": "grok",
-            "sources": []
-          },
-          {
-            "v": "161–162cm",
-            "status": "grok",
-            "sources": []
-          }
-        ]
-      },
-      {
-        "item": "혈액형",
-        "cells": [
-          {
-            "v": "B",
-            "status": "grok",
-            "sources": []
-          },
-          {
-            "v": "O",
-            "status": "grok",
-            "sources": []
-          },
-          {
-            "v": "A",
-            "status": "grok",
-            "sources": []
-          },
-          {
-            "v": "A",
-            "status": "grok",
-            "sources": []
-          }
-        ]
-      },
-      {
-        "item": "MBTI",
-        "cells": [
-          {
-            "v": "ESFP",
-            "status": "grok",
-            "sources": []
-          },
-          {
-            "v": "ENFP",
-            "status": "grok",
-            "sources": []
-          },
-          {
-            "v": "ENFP",
-            "status": "grok",
-            "sources": []
-          },
-          {
-            "v": "ISFP",
-            "status": "grok",
-            "sources": []
-          }
-        ]
-      },
-      {
-        "item": "포지션",
-        "cells": [
-          {
-            "v": "리더 (최연장)",
-            "status": "verified",
-            "sources": [
-              "FANDOM-WONI"
-            ]
-          },
-          {
-            "v": "메인보컬/리드댄서",
-            "status": "grok",
-            "sources": []
-          },
-          {
-            "v": "리드보컬/분위기 메이커",
-            "status": "grok",
-            "sources": []
-          },
-          {
-            "v": "리드보컬",
-            "status": "grok",
-            "sources": []
-          }
-        ]
-      },
-      {
-        "item": "소속사",
-        "cells": [
-          {
-            "v": "더뮤즈엔터테인먼트",
-            "status": "verified",
-            "sources": [
-              "WIKI-RESCENE"
-            ]
-          },
-          {
-            "v": "더뮤즈엔터테인먼트",
-            "status": "verified",
-            "sources": [
-              "WIKI-RESCENE"
-            ]
-          },
-          {
-            "v": "빌리프랩 (HYBE)",
-            "status": "verified",
-            "sources": [
-              "WIKI-ILLIT"
-            ]
-          },
-          {
-            "v": "빌리프랩 (HYBE)",
-            "status": "verified",
-            "sources": [
-              "WIKI-ILLIT"
-            ]
-          }
-        ]
-      },
-      {
-        "item": "데뷔",
-        "cells": [
-          {
-            "v": "2024-03-26",
-            "status": "verified",
-            "sources": [
-              "WIKI-RESCENE"
-            ]
-          },
-          {
-            "v": "2024-03-26",
-            "status": "verified",
-            "sources": [
-              "WIKI-RESCENE"
-            ]
-          },
-          {
-            "v": "2024-03-25",
-            "status": "verified",
-            "sources": [
-              "WIKI-ILLIT"
-            ]
-          },
-          {
-            "v": "2024-03-25",
-            "status": "verified",
-            "sources": [
-              "WIKI-ILLIT"
-            ]
-          }
-        ]
-      },
-      {
-        "item": "이전 경력",
-        "cells": [
-          {
-            "v": "—",
-            "status": "grok",
-            "sources": []
-          },
-          {
-            "v": "MBC '방과후 설렘' 최종 13위",
-            "status": "verified",
-            "sources": [
-              "WIKI-RESCENE"
-            ]
-          },
-          {
-            "v": "R U Next? 출신",
-            "status": "verified",
-            "sources": [
-              "WIKI-ILLIT"
-            ]
-          },
-          {
-            "v": "R U Next? 출신, 솔로 예능 '원희는 스무살'(쿠팡플레이, 2026)",
-            "status": "verified",
-            "sources": [
-              "WIKI-WONHEE"
-            ]
-          }
-        ]
-      }
-    ],
-    "insights": [
-      "원이·윤아 = 2004년생 언니 라인 / 미나미·원희 = 2006·2007년생 막내 라인",
-      "원이: 리더·콘텐츠 엔진 (거제 사투리, 유튜브, '안원잘부' 100만, 멜론 1위 역주행 언급) — Grok 대화 기준",
-      "미나미: 일본인 올라운더, 갸루 밈, 광고 100편+ 주장 — Grok 대화 기준, 미확인",
-      "윤아: 장기 연습생, 최장신, 예능·분위기 라인 — Grok 대화 기준",
-      "원희: 짧은 연습 기간, 버스터미널 캐스팅 일화(소속사 스카우트 일화는 SBS star 보도), 브랜드평판 상위권 — Grok 대화 기준",
-      "페어: 원이+미나미('원나미')가 RESCENE 역주행 견인 / 윤아+원희 ILLIT 보컬·예능 라인 — Grok 대화 기준"
-    ],
-    "insightStatus": "grok"
-  },
-  "groups": {
-    "title": "걸그룹 대시보드 시드 (3–5세대 18팀, Grok 대화 기준일 2026-08-29)",
-    "list": [
-      "BLACKPINK",
-      "TWICE",
-      "BABYMONSTER",
-      "ITZY",
-      "i-dle",
-      "aespa",
-      "NewJeans",
-      "IVE",
-      "ILLIT",
-      "LE SSERAFIM",
-      "Red Velvet",
-      "NMIXX",
-      "Hearts2Hearts",
-      "KATSEYE",
-      "STAYC",
-      "KISS OF LIFE",
-      "MEOVV",
-      "izna"
-    ],
-    "facts": [
-      {
-        "text": "BLACKPINK 유튜브 구독자 약 1억 100만 (2026-02 아티스트 최초 1억 돌파)",
-        "status": "verified",
-        "sources": [
-          "YNA-BP100M",
-          "CHUKKAE-YT"
-        ]
-      },
-      {
-        "text": "KATSEYE 그래미 신인상 후보 (2026, 수상 불발)",
-        "status": "verified",
-        "sources": [
-          "TENASIA-KATSEYE"
-        ]
-      },
-      {
-        "text": "BABYMONSTER 누적 100억 뷰",
-        "status": "unverified",
-        "sources": [
-          "GROK"
-        ]
-      },
-      {
-        "text": "ILLIT 유튜브 뮤직 월간 리스너 1위",
-        "status": "unverified",
-        "sources": [
-          "GROK"
-        ]
-      },
-      {
-        "text": "RESCENE 국내 차트 역주행",
-        "status": "grok",
-        "sources": [
-          "GROK"
-        ]
-      },
-      {
-        "text": "2006년생 라인: 은채, 해린, 규진, 아사, 메간, 키키(Hearts2Hearts) 등",
-        "status": "grok",
-        "sources": [
-          "GROK"
-        ]
-      },
-      {
-        "text": "그 외 팀별 구독자 수·평균 나이는 미확인 (확정/추정 구분 필요)",
-        "status": "unverified",
-        "sources": [
-          "GROK"
-        ]
-      }
+ "compare": {
+  "title": "5세대 '입덕 요정' 4인 비교 — RESCENE 원이·미나미 / ILLIT 윤아·원희",
+  "columns": [
+   "RESCENE 원이",
+   "RESCENE 미나미",
+   "ILLIT 윤아",
+   "ILLIT 원희"
+  ],
+  "rows": [
+   {
+    "item": "본명",
+    "cells": [
+     {
+      "v": "정원이",
+      "status": "verified",
+      "sources": [
+       "FANDOM-WONI"
+      ]
+     },
+     {
+      "v": "이토 미나미",
+      "status": "verified",
+      "sources": [
+       "FANDOM-MINAMI"
+      ]
+     },
+     {
+      "v": "노윤아",
+      "status": "verified",
+      "sources": [
+       "DBKPOP-ILLIT"
+      ]
+     },
+     {
+      "v": "이원희",
+      "status": "verified",
+      "sources": [
+       "WIKI-WONHEE"
+      ]
+     }
     ]
+   },
+   {
+    "item": "생년월일 (만 나이, 2026-10-04 기준)",
+    "cells": [
+     {
+      "v": "2004-05-25 (22)",
+      "status": "verified",
+      "sources": [
+       "FANDOM-WONI"
+      ]
+     },
+     {
+      "v": "2006-11-29 (19)",
+      "status": "verified",
+      "sources": [
+       "FANDOM-MINAMI"
+      ]
+     },
+     {
+      "v": "2004-01-15 (22)",
+      "status": "verified",
+      "sources": [
+       "DBKPOP-ILLIT"
+      ]
+     },
+     {
+      "v": "2007-06-26 (19)",
+      "status": "verified",
+      "sources": [
+       "WIKI-WONHEE"
+      ]
+     }
+    ]
+   },
+   {
+    "item": "출신",
+    "cells": [
+     {
+      "v": "경남 거제",
+      "status": "verified",
+      "sources": [
+       "FANDOM-WONI"
+      ]
+     },
+     {
+      "v": "일본 — 출처 불일치 (Grok: 지바 / Fandom: 나가사키 쓰시마) 미확인",
+      "status": "unverified",
+      "sources": [
+       "GROK",
+       "FANDOM-MINAMI"
+      ]
+     },
+     {
+      "v": "충북 충주",
+      "status": "verified",
+      "sources": [
+       "DBKPOP-ILLIT"
+      ]
+     },
+     {
+      "v": "부산 (Grok: 부산→창원)",
+      "status": "verified",
+      "sources": [
+       "WIKI-WONHEE"
+      ]
+     }
+    ]
+   },
+   {
+    "item": "키",
+    "cells": [
+     {
+      "v": "162–163cm",
+      "status": "grok",
+      "sources": []
+     },
+     {
+      "v": "162–164cm",
+      "status": "grok",
+      "sources": []
+     },
+     {
+      "v": "168cm",
+      "status": "grok",
+      "sources": []
+     },
+     {
+      "v": "161–162cm",
+      "status": "grok",
+      "sources": []
+     }
+    ]
+   },
+   {
+    "item": "혈액형",
+    "cells": [
+     {
+      "v": "B",
+      "status": "grok",
+      "sources": []
+     },
+     {
+      "v": "O",
+      "status": "grok",
+      "sources": []
+     },
+     {
+      "v": "A",
+      "status": "grok",
+      "sources": []
+     },
+     {
+      "v": "A",
+      "status": "grok",
+      "sources": []
+     }
+    ]
+   },
+   {
+    "item": "MBTI",
+    "cells": [
+     {
+      "v": "ESFP",
+      "status": "grok",
+      "sources": []
+     },
+     {
+      "v": "ENFP",
+      "status": "grok",
+      "sources": []
+     },
+     {
+      "v": "ENFP",
+      "status": "grok",
+      "sources": []
+     },
+     {
+      "v": "ISFP",
+      "status": "grok",
+      "sources": []
+     }
+    ]
+   },
+   {
+    "item": "포지션",
+    "cells": [
+     {
+      "v": "리더 (최연장)",
+      "status": "verified",
+      "sources": [
+       "FANDOM-WONI"
+      ]
+     },
+     {
+      "v": "메인보컬/리드댄서",
+      "status": "grok",
+      "sources": []
+     },
+     {
+      "v": "리드보컬/분위기 메이커",
+      "status": "grok",
+      "sources": []
+     },
+     {
+      "v": "리드보컬",
+      "status": "grok",
+      "sources": []
+     }
+    ]
+   },
+   {
+    "item": "소속사",
+    "cells": [
+     {
+      "v": "더뮤즈엔터테인먼트",
+      "status": "verified",
+      "sources": [
+       "WIKI-RESCENE"
+      ]
+     },
+     {
+      "v": "더뮤즈엔터테인먼트",
+      "status": "verified",
+      "sources": [
+       "WIKI-RESCENE"
+      ]
+     },
+     {
+      "v": "빌리프랩 (HYBE)",
+      "status": "verified",
+      "sources": [
+       "WIKI-ILLIT"
+      ]
+     },
+     {
+      "v": "빌리프랩 (HYBE)",
+      "status": "verified",
+      "sources": [
+       "WIKI-ILLIT"
+      ]
+     }
+    ]
+   },
+   {
+    "item": "데뷔",
+    "cells": [
+     {
+      "v": "2024-03-26",
+      "status": "verified",
+      "sources": [
+       "WIKI-RESCENE"
+      ]
+     },
+     {
+      "v": "2024-03-26",
+      "status": "verified",
+      "sources": [
+       "WIKI-RESCENE"
+      ]
+     },
+     {
+      "v": "2024-03-25",
+      "status": "verified",
+      "sources": [
+       "WIKI-ILLIT"
+      ]
+     },
+     {
+      "v": "2024-03-25",
+      "status": "verified",
+      "sources": [
+       "WIKI-ILLIT"
+      ]
+     }
+    ]
+   },
+   {
+    "item": "이전 경력",
+    "cells": [
+     {
+      "v": "—",
+      "status": "grok",
+      "sources": []
+     },
+     {
+      "v": "MBC '방과후 설렘' 최종 13위",
+      "status": "verified",
+      "sources": [
+       "WIKI-RESCENE"
+      ]
+     },
+     {
+      "v": "R U Next? 출신",
+      "status": "verified",
+      "sources": [
+       "WIKI-ILLIT"
+      ]
+     },
+     {
+      "v": "R U Next? 출신, 솔로 예능 '원희는 스무살'(쿠팡플레이, 2026)",
+      "status": "verified",
+      "sources": [
+       "WIKI-WONHEE"
+      ]
+     }
+    ]
+   }
+  ],
+  "insights": [
+   "원이·윤아 = 2004년생 언니 라인 / 미나미·원희 = 2006·2007년생 막내 라인",
+   "원이: 리더·콘텐츠 엔진 (거제 사투리, 유튜브, '안원잘부' 100만, 멜론 1위 역주행 언급) — Grok 대화 기준",
+   "미나미: 일본인 올라운더, 갸루 밈, 광고 100편+ 주장 — Grok 대화 기준, 미확인",
+   "윤아: 장기 연습생, 최장신, 예능·분위기 라인 — Grok 대화 기준",
+   "원희: 짧은 연습 기간, 버스터미널 캐스팅 일화(소속사 스카우트 일화는 SBS star 보도), 브랜드평판 상위권 — Grok 대화 기준",
+   "페어: 원이+미나미('원나미')가 RESCENE 역주행 견인 / 윤아+원희 ILLIT 보컬·예능 라인 — Grok 대화 기준"
+  ],
+  "insightStatus": "grok"
+ },
+ "groups": {
+  "title": "걸그룹 대시보드 시드 (3–5세대 18팀, Grok 대화 기준일 2026-08-29)",
+  "list": [
+   "BLACKPINK",
+   "TWICE",
+   "BABYMONSTER",
+   "ITZY",
+   "i-dle",
+   "aespa",
+   "NewJeans",
+   "IVE",
+   "ILLIT",
+   "LE SSERAFIM",
+   "Red Velvet",
+   "NMIXX",
+   "Hearts2Hearts",
+   "KATSEYE",
+   "STAYC",
+   "KISS OF LIFE",
+   "MEOVV",
+   "izna"
+  ],
+  "facts": [
+   {
+    "text": "BLACKPINK 유튜브 구독자 약 1억 100만 (2026-02 아티스트 최초 1억 돌파)",
+    "status": "verified",
+    "sources": [
+     "YNA-BP100M",
+     "CHUKKAE-YT"
+    ]
+   },
+   {
+    "text": "KATSEYE 그래미 신인상 후보 (2026, 수상 불발)",
+    "status": "verified",
+    "sources": [
+     "TENASIA-KATSEYE"
+    ]
+   },
+   {
+    "text": "BABYMONSTER 누적 100억 뷰",
+    "status": "unverified",
+    "sources": [
+     "GROK"
+    ]
+   },
+   {
+    "text": "ILLIT 유튜브 뮤직 월간 리스너 1위",
+    "status": "unverified",
+    "sources": [
+     "GROK"
+    ]
+   },
+   {
+    "text": "RESCENE 국내 차트 역주행",
+    "status": "grok",
+    "sources": [
+     "GROK"
+    ]
+   },
+   {
+    "text": "2006년생 라인: 은채, 해린, 규진, 아사, 메간, 키키(Hearts2Hearts) 등",
+    "status": "grok",
+    "sources": [
+     "GROK"
+    ]
+   },
+   {
+    "text": "그 외 팀별 구독자 수·평균 나이는 미확인 (확정/추정 구분 필요)",
+    "status": "unverified",
+    "sources": [
+     "GROK"
+    ]
+   }
+  ]
+ },
+ "profiles": [
+  {
+   "id": "rescene",
+   "name": "RESCENE (리센느)",
+   "type": "girl",
+   "facts": [
+    {
+     "k": "SPOTV K-POP AWARDS 2026",
+     "v": "스포티비 앰버서더·글로벌 커넥트 수상 (2026-09-06)",
+     "status": "verified",
+     "sources": [
+      "SPOTV-SKA"
+     ]
+    },
+    {
+     "k": "2026 시상식 출연",
+     "v": "KWDA·SKA·TMA·KGMA(원이 MC)·AAA 2026 양일",
+     "status": "verified",
+     "sources": [
+      "EDAILY-KGMA",
+      "STARNEWS-AAA"
+     ]
+    },
+    {
+     "k": "유튜브 구독자",
+     "v": "‘유튜브·SNS’ 탭 참조",
+     "status": "verified",
+     "sources": [
+      "CHUKKAE-YT-1004"
+     ]
+    }
+   ],
+   "timeline": [
+    {
+     "date": "2026-07-08",
+     "text": "‘Pretty Girl’ 리메이크 발매",
+     "status": "claude",
+     "sources": [
+      "CLAUDE-CHATS-1"
+     ]
+    },
+    {
+     "date": "2026",
+     "text": "‘LOVE ATTACK’ 멜론 TOP100 역주행",
+     "status": "claude",
+     "sources": [
+      "CLAUDE-CHATS-1"
+     ]
+    },
+    {
+     "date": "2026-09",
+     "text": "9월 신인 브랜드평판 1위",
+     "status": "claude",
+     "sources": [
+      "CLAUDE-CHATS-1"
+     ]
+    },
+    {
+     "date": "2026-09-06",
+     "text": "SPOTV K-POP AWARDS 수상",
+     "status": "verified",
+     "sources": [
+      "SPOTV-SKA"
+     ]
+    },
+    {
+     "date": "2026-09-26",
+     "text": "OBJET K-POP FESTA(9/26–27) 취소",
+     "status": "claude",
+     "sources": [
+      "CLAUDE-CHATS-1"
+     ]
+    }
+   ],
+   "pending": [
+    "미나미 학교·식단 (배치 2)",
+    "채널 수익 (배치 2)"
+   ]
   }
+ ],
+ "ambassadors": {
+  "title": "K-pop 앰버서더 총람 (Claude 9/18 아티팩트 요약)",
+  "status": "claude",
+  "sources": [
+   "CLAUDE-CHATS-1"
+  ],
+  "summary": "162건 · 9개 카테고리(럭셔리 패션, 컨템포러리/캐주얼, 스포츠/아웃도어, 럭셔리 뷰티/향수, K-뷰티/스킨케어, 주얼리/시계, 아이웨어, 테크/가전, 식품/금융/라이프스타일) · 107개 브랜드. 해외 데이터는 WWD/Variety/Hypebae 2026 스냅샷으로 전수 아님.",
+  "comparisons": [
+   [
+    "Louis Vuitton",
+    "K-pop 7명",
+    "해외 13명"
+   ],
+   [
+    "Chanel",
+    "제니·정국·민지·G-DRAGON",
+    "해외 15명"
+   ],
+   [
+    "Prada",
+    "카리나·사나·재현",
+    "해외 8명"
+   ],
+   [
+    "Tiffany & Co.",
+    "로제·지민",
+    "비욘세·제이지·안야 테일러조이·갤 가돗·헤일리 비버"
+   ]
+  ],
+  "examples": [
+   [
+    "리사",
+    "Nike"
+   ],
+   [
+    "카리나",
+    "Nike·Converse"
+   ],
+   [
+    "로제",
+    "Puma"
+   ],
+   [
+    "윈터",
+    "New Balance"
+   ],
+   [
+    "필릭스",
+    "Adidas"
+   ],
+   [
+    "지수",
+    "Salomon·Alo Yoga"
+   ]
+  ],
+  "note": "대화 제목은 ‘블랙핑크 멤버별 SNS 구독자수 비교’지만 추출본에 팔로워 수치는 없음 → 팔로워는 ‘유튜브·SNS’ 탭에서 웹 확인값 사용. LE SSERAFIM LV 역할·BTS 럭셔리 협업은 배치 2에서 보강 예정."
+ },
+ "memberChart": {
+  "title": "2004–2010년생 걸그룹 멤버 차트",
+  "status": "pending",
+  "rows": [],
+  "note": "배치 2(claude_chats_2.md)에서 채움"
+ },
+ "brandCollabs": {
+  "title": "BTS 럭셔리 브랜드 협업",
+  "status": "pending",
+  "rows": [],
+  "note": "배치 2에서 채움"
+ }
 }

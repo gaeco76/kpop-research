@@ -20,7 +20,9 @@
     <a href="#events" data-tab="events">공연·시상식</a>
     <a href="#rpd" data-tab="rpd">랜덤플레이댄스</a>
     <a href="#auditions" data-tab="auditions">오디션</a>
-    <a href="#artists" data-tab="artists">아티스트 비교</a>
+    <a href="#social" data-tab="social">유튜브·SNS</a>
+    <a href="#industry" data-tab="industry">산업·수익</a>
+    <a href="#artists" data-tab="artists">아티스트</a>
     <a href="#log" data-tab="log">업데이트 로그</a>
   </nav>
 </header>
@@ -95,6 +97,11 @@
     <div class="tablewrap"><table class="data" id="tmaWinners"></table></div>
     <p class="muted small" id="tmaVideo"></p>
     <div class="srcbox" id="src-events"></div>
+    <h2 id="awTitle" style="margin-top:36px"></h2>
+    <p class="muted" id="awNote"></p>
+    <div class="controls"><div class="seg" id="awState"><button data-v="all" class="on">전체</button><button data-v="종료">종료</button><button data-v="예정">예정</button></div></div>
+    <div class="tablewrap"><table class="data" id="awTable"></table></div>
+    <div class="srcbox" id="src-awards"></div>
   </section>
 
   <section id="sec-rpd" class="sec" data-sec="rpd" hidden>
@@ -110,6 +117,8 @@
     <div class="tablewrap"><table class="data" id="rpdTable"></table></div>
     <p class="muted small" id="rpdNote"></p>
     <div class="srcbox" id="src-rpd"></div>
+    <div id="rpdV2"></div>
+    <div class="srcbox" id="src-rpd2"></div>
   </section>
 
   <section id="sec-auditions" class="sec" data-sec="auditions" hidden>
@@ -131,6 +140,35 @@
     <div class="chips" id="grpList"></div>
     <ul class="list" id="grpFacts"></ul>
     <div class="srcbox" id="src-artists"></div>
+    <div id="artExt"></div>
+    <div class="srcbox" id="src-artists2"></div>
+  </section>
+
+  <section id="sec-social" class="sec" data-sec="social" hidden>
+    <h2 id="ytTitle"></h2>
+    <p class="muted" id="ytSnap"></p>
+    <div class="controls">
+      <div class="seg" id="ytType"><button data-v="girl" class="on">걸그룹</button><button data-v="boy">보이그룹</button><button data-v="all">전체</button></div>
+      <div class="seg" id="ytGen"><button data-v="all" class="on">전 세대</button><button data-v="2">2세대</button><button data-v="3">3세대</button><button data-v="4">4세대</button><button data-v="5">5세대</button></div>
+      <input type="search" id="ytSearch" placeholder="그룹/소속사 검색">
+    </div>
+    <div class="cards" id="ytStats"></div>
+    <div class="tablewrap"><table class="data" id="ytTable"></table></div>
+    <ul class="list small" id="ytNotes"></ul>
+    <h3 id="igTitle"></h3>
+    <div class="tablewrap"><table class="data" id="igTable"></table></div>
+    <ul class="list small" id="igNotes"></ul>
+    <h3 id="mgTitle"></h3>
+    <div class="tablewrap"><table class="data" id="mgTable"></table></div>
+    <p class="muted small" id="mgNote"></p>
+    <div class="srcbox" id="src-social"></div>
+  </section>
+
+  <section id="sec-industry" class="sec" data-sec="industry" hidden>
+    <h2>산업·수익 구조</h2>
+    <p class="muted">아래 수치는 대부분 사용자 Claude 리서치의 <b>가정 기반 추정 모델</b>입니다. 실제 공시·보고치와 구분해 보세요.</p>
+    <div id="indBody"></div>
+    <div class="srcbox" id="src-industry"></div>
   </section>
 
   <section id="sec-log" class="sec" data-sec="log" hidden>

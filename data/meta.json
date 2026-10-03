@@ -1,17 +1,21 @@
 {
-  "lastUpdated": "2026-10-04T07:05:00+09:00",
-  "log": [
-    {
-      "date": "2026-10-04 07:05 KST",
-      "text": "Claude 리서치 ‘K-POP 해외투어 트래커’(검증본 2026-08-29, 57건·46팀) 병합 → 새 탭 ‘해외 투어 트래커 (2025–2027)’ 추가(data/tracker.json). 재검증: Stray Kids dominATE 회차 충돌 해소(본편 54 + 인천 앙코르 2 = 56회, 보고 54회 1,983,821명·$263.3M, Touring Data), ATEEZ·DAY6·NMIXX·ITZY·STAYC·TREASURE·TWS·izna 자리표시 날짜를 공식 일정으로 교체(NMIXX는 2026년 유럽·북미로 교정). BTS는 Billboard 9/30 보고 유지(트래커 08-11 수치는 이력으로 표기). 투어 박스스코어에 Stray Kids dominATE·BLACKPINK Born Pink 추가. BLACKPINK DEADLINE 총관객·총매출은 여전히 미공개."
-    },
-    {
-      "date": "2026-10-04 KST",
-      "text": "사이트 최초 구축. Grok 대화 7건 기반 데이터를 웹 출처로 교차 검증: 투어 31건(Billboard·Pollstar·Wikipedia), 2026 TMA 출연·수상, 오디션(HYBE India·Girls Planet 2·Boys II Planet), RESCENE/ILLIT 멤버 프로필."
-    },
-    {
-      "date": "2026-10-04 KST",
-      "text": "Grok 대화 대비 변경: BTS ARIRANG 매출은 Billboard '5억 달러 돌파' 공식 + 위키 $637.5M 병기 / Bad Bunny DTMF($467.5M) 추가 / AC/DC Black Ice 회차 107→165(관객표 기준) / Busan-z 곡 '혜성(윤하)' 확정 / 임영웅 2곡 확정 / 누락됐던 관객 수(One Direction, Bon Jovi 등) 보강."
-    }
-  ]
+ "lastUpdated": "2026-10-04T08:10:00+09:00",
+ "log": [
+  {
+   "date": "2026-10-04 08:10 KST",
+   "text": "Claude 대화 배치 1(12개) 병합: ‘유튜브·SNS’ 탭 신설(그룹 공식 채널 66팀 구독자 2026-10-04 스냅샷, 걸/보이·세대 필터·정렬, BLACKPINK 인스타 팔로워, 복수 그룹 멤버), ‘산업·수익’ 탭 신설(KWDA 운영 구조, 걸그룹 투어 경제성·PUREFLOW 수익·감가상각 모델 — Claude 추정), 공연·시상식에 2026 시상식 캘린더 17건(KWDA·SKA 수상, KGMA 40팀·AAA 양일·MMA 1·3차 라인업 웹 확인), 랜덤플레이댄스 v2(YOLO+ByteTrack+Jev) 방법론, 트래커 갱신(BTS 88회 확인, KATSEYE 9/1–11/28, 르세라핌 ECH 237,441장·$34.1M 부분 확인, Pureflow 회차·aespa Parallel Line 관객 충돌 표시), 아티스트 탭에 프로필(RESCENE)·앰버서더 총람 추가 — 배치 2 수용 구조."
+  },
+  {
+   "date": "2026-10-04 07:05 KST",
+   "text": "Claude 리서치 ‘K-POP 해외투어 트래커’(검증본 2026-08-29, 57건·46팀) 병합 → 새 탭 ‘해외 투어 트래커 (2025–2027)’ 추가(data/tracker.json). 재검증: Stray Kids dominATE 회차 충돌 해소(본편 54 + 인천 앙코르 2 = 56회, 보고 54회 1,983,821명·$263.3M, Touring Data), ATEEZ·DAY6·NMIXX·ITZY·STAYC·TREASURE·TWS·izna 자리표시 날짜를 공식 일정으로 교체(NMIXX는 2026년 유럽·북미로 교정). BTS는 Billboard 9/30 보고 유지(트래커 08-11 수치는 이력으로 표기). 투어 박스스코어에 Stray Kids dominATE·BLACKPINK Born Pink 추가. BLACKPINK DEADLINE 총관객·총매출은 여전히 미공개."
+  },
+  {
+   "date": "2026-10-04 KST",
+   "text": "사이트 최초 구축. Grok 대화 7건 기반 데이터를 웹 출처로 교차 검증: 투어 31건(Billboard·Pollstar·Wikipedia), 2026 TMA 출연·수상, 오디션(HYBE India·Girls Planet 2·Boys II Planet), RESCENE/ILLIT 멤버 프로필."
+  },
+  {
+   "date": "2026-10-04 KST",
+   "text": "Grok 대화 대비 변경: BTS ARIRANG 매출은 Billboard '5억 달러 돌파' 공식 + 위키 $637.5M 병기 / Bad Bunny DTMF($467.5M) 추가 / AC/DC Black Ice 회차 107→165(관객표 기준) / Busan-z 곡 '혜성(윤하)' 확정 / 임영웅 2곡 확정 / 누락됐던 관객 수(One Direction, Bon Jovi 등) 보강."
+  }
+ ]
 }
