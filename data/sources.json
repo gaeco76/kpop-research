@@ -122,5 +122,121 @@
   "GROK": {
     "title": "Grok 대화 기준 (사용자 과거 대화, 외부 검증 전)",
     "url": ""
+  },
+  "CLAUDE-TRACKER": {
+    "title": "Claude 리서치 기준 — K-POP 해외투어 트래커 검증본 (2026-08-29, 사용자 제공)",
+    "url": ""
+  },
+  "CL-CHOSUN-BP": {
+    "title": "조선일보 — 블랙핑크 16도시 33회 폐막 (Claude 트래커 인용)",
+    "url": "https://www.chosun.com/english/kpop-culture-en/2026/01/28/YPEIMWHL45CTNDSCBKQI36TRYQ/"
+  },
+  "CL-STARNEWS-BTS": {
+    "title": "스타뉴스 — BTS 38회 230만·$433.2M 박스스코어 (Claude 트래커 인용)",
+    "url": "https://www.starnewskorea.com/en/music/2026/08/28/2026082816554176386"
+  },
+  "CL-BB-SKZ": {
+    "title": "Billboard — Stray Kids Dominate World Tour Sets K-pop Boxscore Records (2025-08-08)",
+    "url": "https://www.billboard.com/pro/stray-kids-dominate-world-tour-k-pop-boxscore-records/"
+  },
+  "CL-KH-SKZ": {
+    "title": "코리아헤럴드 — 스키 RUN IT 아시아 1차 / dominATE 56회 (Claude 트래커 인용)",
+    "url": "https://www.koreaherald.com/article/10785224"
+  },
+  "CL-YNA-SVT": {
+    "title": "연합뉴스 — 세븐틴 반기 25회 57.4만·$88M (Claude 트래커 인용)",
+    "url": "https://en.yna.co.kr/view/AEN20260601005400315"
+  },
+  "CL-KH-IDLE": {
+    "title": "코리아헤럴드 — 아이들 북미 레그 취소 (큐브 성명, Claude 트래커 인용)",
+    "url": "https://www.koreaherald.com/article/10720946"
+  },
+  "TD-SKZ": {
+    "title": "Touring Data — Stray Kids Dominate Tour (보고 54회 $263.3M·1,983,821명)",
+    "url": "https://touringdata.org/2025/08/14/stray-kids-dominate-tour/"
+  },
+  "WIKI-SKZ-DOM": {
+    "title": "Wikipedia — Dominate World Tour (56회, 인천 앙코르 포함)",
+    "url": "https://en.wikipedia.org/wiki/Dominate_World_Tour"
+  },
+  "HERALD-BP10": {
+    "title": "헤럴드경제 — Blackpink at 10: 33개 스타디움 Deadline 투어",
+    "url": "https://biz.heraldcorp.com/article/10782198"
+  },
+  "TD-BP-DEADLINE": {
+    "title": "Touring Data — BLACKPINK Deadline Tour (박스오피스 TBA)",
+    "url": "https://touringdata.org/2025/06/19/blackpink-deadline-tour/"
+  },
+  "BB-YE2025": {
+    "title": "Billboard — The Year in Touring 2025 (K-pop 연간 차트, PDF)",
+    "url": "https://www.billboard.com/wp-content/uploads/2025/12/YE-Touring-2025.pdf"
+  },
+  "NME-ATEEZ": {
+    "title": "NME — ATEEZ 2025 'In Your Fantasy' world tour dates",
+    "url": "https://www.nme.com/news/music/ateez-2025-in-your-fantasy-world-tour-cities-dates-tickets-more-3851482"
+  },
+  "KQ-ATEEZ": {
+    "title": "KQ엔터테인먼트 — IN YOUR FANTASY 북미 공지",
+    "url": "https://ateez.kqent.com/contents/686cba47ac46c80968ca7c87"
+  },
+  "NME-DAY6": {
+    "title": "NME — DAY6 2024-2025 world tour 'Forever Young'",
+    "url": "https://www.nme.com/news/music/day6-announce-first-leg-of-2024-2025-world-tour-forever-young-3782814"
+  },
+  "SOOMPI-DAY6": {
+    "title": "Soompi — DAY6 FOREVER YOUNG 일정",
+    "url": "https://www.soompi.com/article/1680491wpp/day6-announces-dates-and-cities-for-2024-2025-world-tour-forever-young"
+  },
+  "LN-NMIXX": {
+    "title": "Live Nation — NMIXX 1ST WORLD TOUR <EPISODE 1: ZERO FRONTIER> 일정",
+    "url": "https://newsroom.livenation.com/news/nmixx-announce-debut-global-run-1st-world-tour-episode-1-zero-frontier/"
+  },
+  "DIPE-ITZY": {
+    "title": "DIPE — ITZY 3rd world tour TUNNEL VISION 1차 일정",
+    "url": "https://www.dipe.co.kr/2337236"
+  },
+  "KH-ITZY2": {
+    "title": "K-Hallyu — ITZY 유럽·아시아 2차 일정",
+    "url": "https://k-hallyu.com/articles/itzy-announce-european-and-asian-dates-for-third-world-tour"
+  },
+  "SOOMPI-ITZY": {
+    "title": "Soompi — ITZY Announces 2026 World Tour TUNNEL VISION",
+    "url": "https://www.soompi.com/article/1793787wpp/itzy-announces-2026-world-tour-tunnel-vision"
+  },
+  "SOOMPI-STAYC": {
+    "title": "Soompi — STAYC 2025 World Tour STAY TUNED stops",
+    "url": "https://www.soompi.com/article/1732148wpp/stayc-announces-stops-for-2025-world-tour-stay-tuned"
+  },
+  "SN-STAYC": {
+    "title": "Sporting News — STAYC 'Stay Tuned' 북미 일정",
+    "url": "https://www.sportingnews.com/ca/tickets/news/stayc-2025-tickets-prices-cities-dates-stay-tuned-world-tour/f599c4cc95844cae68dc750f"
+  },
+  "YGEX-TREASURE": {
+    "title": "YGEX — 2025-26 TREASURE TOUR [PULSE ON] IN JAPAN",
+    "url": "https://ygex.jp/en/treasure/news/detail.php?id=1125826"
+  },
+  "YG-TREASURE": {
+    "title": "YG — 2025-26 TREASURE TOUR [PULSE ON] (아시아 일정 공지)",
+    "url": "https://www.facebook.com/OfficialTreasure/posts/1406174894213272/"
+  },
+  "WEVERSE-TWS-SEOUL": {
+    "title": "Weverse — 2025 TWS TOUR '24/7:WITH:US' IN SEOUL",
+    "url": "https://weverse.io/tws/notice/26785"
+  },
+  "HYBEJP-TWS": {
+    "title": "HYBE JAPAN — TWS 24/7:WITH:US IN JAPAN",
+    "url": "https://www.hybejapan.events/tws/24_7_with_us_in_japan"
+  },
+  "WEVERSE-TWS-MACAU": {
+    "title": "Weverse — TWS TOUR IN MACAU & KAOHSIUNG",
+    "url": "https://weverse.io/tws/notice/31558"
+  },
+  "SOOMPI-IZNA": {
+    "title": "Soompi — izna 2026 Tour WHO DAT GIRL? 1차 일정",
+    "url": "https://www.soompi.com/article/1853677wpp/izna-announces-first-stops-for-2026-tour-who-dat-girl"
+  },
+  "IZNA-JP": {
+    "title": "izna 일본 공식 — WHO DAT GIRL? in JAPAN",
+    "url": "https://special-izna-official.jp/whodatgirlinjapan/"
   }
 }

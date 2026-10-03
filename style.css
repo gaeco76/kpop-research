@@ -55,3 +55,12 @@ a{color:var(--blue)}
 pre{background:#f5f5f7;border-radius:10px;padding:10px;overflow-x:auto;font-size:12.5px;white-space:pre}
 .foot{color:var(--mut);font-size:12px;padding-bottom:40px}
 @media (max-width:600px){h2{font-size:20px} table.data{font-size:12.5px} table.data th,table.data td{padding:7px 8px} .hide-sm{display:none}}
+.badge.conflict{background:#ffe4cc;color:#a33a00;border:1px solid #f5b98a}
+.badge.claude{background:#e8eefc;color:#3a4fa0}
+.badge.chg{background:#1d1d1f;color:#fff}
+select{font:inherit;font-size:13.5px;padding:6px 10px;border:1px solid var(--line);border-radius:10px;background:#fff}
+.tbd{color:var(--amber);font-weight:600}
+#trkTable{min-width:1350px} #trkTable td:first-child,#trkTable td:nth-child(6){white-space:nowrap}
+#trkTable td:nth-child(2){min-width:170px} #trkTable td:nth-child(5){min-width:150px} #trkTable td:last-child{min-width:280px}
+#trkTable td:nth-child(3),#trkTable td:nth-child(4){white-space:nowrap}
+#recTable{min-width:900px} #recTable td:nth-child(8){min-width:260px}

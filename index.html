@@ -16,6 +16,7 @@
   </div>
   <nav class="wrap tabs" id="tabs" role="tablist">
     <a href="#tours" data-tab="tours">투어 박스스코어</a>
+    <a href="#tracker" data-tab="tracker">해외 투어 트래커</a>
     <a href="#events" data-tab="events">공연·시상식</a>
     <a href="#rpd" data-tab="rpd">랜덤플레이댄스</a>
     <a href="#auditions" data-tab="auditions">오디션</a>
@@ -29,7 +30,9 @@
     <span class="badge verified">검증됨</span> 웹 출처로 확인
     <span class="badge partial">부분 확인</span> 일부만 확인
     <span class="badge grok">Grok 대화 기준</span> 과거 대화 내용(외부 미검증)
-    <span class="badge unverified">미확인</span> 확인 불가/출처 불일치
+    <span class="badge unverified">미확인</span> 확인 불가
+    <span class="badge conflict">충돌</span> 출처 간 값이 다름
+    <span class="badge claude">Claude 리서치 기준</span> 사용자 Claude 리서치(출처 URL 없음)
   </div>
 
   <section id="sec-tours" class="sec" data-sec="tours">
@@ -52,6 +55,30 @@
     <h3>주요 마일스톤</h3>
     <ul class="list" id="milestones"></ul>
     <div class="srcbox" id="src-tours"></div>
+  </section>
+
+
+  <section id="sec-tracker" class="sec" data-sec="tracker" hidden>
+    <h2>해외 투어 트래커 (2025–2027)</h2>
+    <p class="muted" id="trkIntro"></p>
+    <div class="controls">
+      <input type="search" id="trkSearch" placeholder="아티스트/투어/권역 검색">
+      <div class="seg" id="trkYear"><button data-v="all" class="on">전체</button><button data-v="2025">2025</button><button data-v="2026">2026</button><button data-v="2027">2027</button></div>
+      <div class="seg" id="trkGroup"><button data-v="all" class="on">전체</button><button data-v="girl">걸그룹</button><button data-v="boy">보이그룹</button><button data-v="solo">솔로</button></div>
+      <select id="trkStatus"><option value="all">검증: 전체</option><option value="verified">검증됨</option><option value="partial">부분 확인</option><option value="conflict">충돌</option><option value="unverified">미확인</option></select>
+      <select id="trkTier"><option value="all">체급: 전체</option><option>스타디움</option><option>돔</option><option>아레나</option><option>레지던시</option></select>
+    </div>
+    <div class="cards" id="trkStats"></div>
+    <div class="tablewrap"><table id="trkTable" class="data"></table></div>
+    <p class="muted small">헤더 클릭으로 정렬. ‘날짜 미정’은 원자료가 1/1~12/31 같은 자리표시 날짜였던 항목. 정확도 매핑: 확정→검증됨, 부분·개략→부분 확인, 충돌→충돌, 미확→미확인. ‘변경’ 표시는 2026-10-04 재검증으로 값이 바뀐 행.</p>
+    <h3>관객 기록 (투어 누적·단일 도시)</h3>
+    <div class="seg" id="recKind"><button data-v="all" class="on">전체</button><button data-v="tour">투어 누적</button><button data-v="city">단일 도시·공연</button></div>
+    <div class="tablewrap" style="margin-top:8px"><table id="recTable" class="data"></table></div>
+    <h3 id="bbTitle"></h3>
+    <div class="tablewrap"><table id="bbTable" class="data"></table></div>
+    <h3>미해결 항목</h3>
+    <ul class="list" id="trkOpen"></ul>
+    <div class="srcbox" id="src-tracker"></div>
   </section>
 
   <section id="sec-events" class="sec" data-sec="events" hidden>

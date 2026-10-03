@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-10-04T06:45:00+09:00",
+  "lastUpdated": "2026-10-04T07:05:00+09:00",
   "log": [
+    {
+      "date": "2026-10-04 07:05 KST",
+      "text": "Claude 리서치 ‘K-POP 해외투어 트래커’(검증본 2026-08-29, 57건·46팀) 병합 → 새 탭 ‘해외 투어 트래커 (2025–2027)’ 추가(data/tracker.json). 재검증: Stray Kids dominATE 회차 충돌 해소(본편 54 + 인천 앙코르 2 = 56회, 보고 54회 1,983,821명·$263.3M, Touring Data), ATEEZ·DAY6·NMIXX·ITZY·STAYC·TREASURE·TWS·izna 자리표시 날짜를 공식 일정으로 교체(NMIXX는 2026년 유럽·북미로 교정). BTS는 Billboard 9/30 보고 유지(트래커 08-11 수치는 이력으로 표기). 투어 박스스코어에 Stray Kids dominATE·BLACKPINK Born Pink 추가. BLACKPINK DEADLINE 총관객·총매출은 여전히 미공개."
+    },
     {
       "date": "2026-10-04 KST",
       "text": "사이트 최초 구축. Grok 대화 7건 기반 데이터를 웹 출처로 교차 검증: 투어 31건(Billboard·Pollstar·Wikipedia), 2026 TMA 출연·수상, 오디션(HYBE India·Girls Planet 2·Boys II Planet), RESCENE/ILLIT 멤버 프로필."

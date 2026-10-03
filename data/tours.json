@@ -148,12 +148,13 @@
       "attendance": null,
       "ongoing": true,
       "status": "partial",
-      "note": "Billboard 본문은 '5억 달러 돌파'(8월 보고분까지)만 명시. $637.5M·50회는 Wikipedia(해당 Billboard 기사 인용) 기준. 누적 관객 미확인(8월 12회 801,000명). 총 88회·34개 도시, 2027-03-16까지, 약 40회 남음",
+      "note": "Billboard 본문은 '5억 달러 돌파'(8월 보고분까지)만 명시. $637.5M·50회는 Wikipedia(해당 Billboard 기사 인용) 기준. 누적 관객 미확인(8월 12회 801,000명). 총 88회·34개 도시, 2027-03-16까지, 약 40회 남음. Claude 트래커(2026-08-11 기준 38회·230만·$433.2M)는 Billboard 9/30 보고로 대체됨. 8/11 누적+8월분 합과 $637.5M이 정확히 일치하지 않아 공식 최종치 대기",
       "sources": [
         "BB-BTS-0930",
         "WIKI-GROSS",
         "SBS-BTS",
-        "EDAILY-BTS"
+        "EDAILY-BTS",
+        "CL-STARNEWS-BTS"
       ]
     },
     {
@@ -465,6 +466,37 @@
       "sources": [
         "WIKI-GROSS",
         "WIKI-ATT"
+      ]
+    },
+    {
+      "artist": "Stray Kids",
+      "tour": "dominATE World Tour",
+      "gross": 263289917,
+      "period": "2024–2025",
+      "shows": 54,
+      "attendance": 1983821,
+      "ongoing": false,
+      "status": "partial",
+      "note": "Touring Data 보고 54회(본편) 기준. 인천 앙코르 2회 포함 시 총 56회(관객·매출 미보고). Claude 트래커 추정 215만·$260M을 대체",
+      "sources": [
+        "TD-SKZ",
+        "WIKI-SKZ-DOM",
+        "CL-BB-SKZ"
+      ]
+    },
+    {
+      "artist": "BLACKPINK",
+      "tour": "Born Pink World Tour",
+      "gross": 331800000,
+      "period": "2022–2023",
+      "shows": 66,
+      "attendance": 1810000,
+      "ongoing": false,
+      "status": "partial",
+      "note": "Touring Data 집계(헤럴드경제 인용). 걸그룹 역대 최고 투어 매출. 관객은 약 181만(반올림)",
+      "sources": [
+        "HERALD-BP10",
+        "CLAUDE-TRACKER"
       ]
     }
   ],

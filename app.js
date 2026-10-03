@@ -4,7 +4,7 @@ const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&g
 const load=n=>fetch('data/'+n+'.json?v='+Date.now()).then(r=>r.json());
 const [meta,sources,tours,events,rpd,auds,artists]=await Promise.all(['meta','sources','tours','events','rpd','auditions','artists'].map(load));
 
-const LABEL={verified:'검증됨',partial:'부분 확인',grok:'Grok 대화 기준',unverified:'미확인',forecast:'전망'};
+const LABEL={verified:'검증됨',partial:'부분 확인',grok:'Grok 대화 기준',unverified:'미확인',forecast:'전망',conflict:'충돌',claude:'Claude 리서치 기준'};
 const badge=s=>s?`<span class="badge ${s}">${LABEL[s]||s}</span>`:'';
 
 // per-section source registry
@@ -109,3 +109,50 @@ R5.render($('#src-artists'));
 $('#logList').innerHTML=meta.log.map(l=>`<li><b>${esc(l.date)}</b> — ${esc(l.text)}</li>`).join('');
 $('#srcAll').innerHTML=Object.entries(sources).map(([id,s])=>`<li>${s.url?`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>`:esc(s.title)} <span class="muted small">(${esc(id)})</span></li>`).join('');
 })().catch(e=>{document.querySelector('main').insertAdjacentHTML('afterbegin','<p style="color:#c9302c">데이터 로드 실패: '+e.message+' — 로컬에서는 <code>python3 -m http.server</code>로 열어주세요.</p>')});
+
+// ===== Tracker (Claude 해외 투어 트래커 병합) =====
+(async function(){
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const [trk,sources]=await Promise.all(['tracker','sources'].map(n=>fetch('data/'+n+'.json?v='+Date.now()).then(r=>r.json())));
+const LABEL={verified:'검증됨',partial:'부분 확인',unverified:'미확인',conflict:'충돌',claude:'Claude 리서치 기준'};
+const badge=s=>`<span class="badge ${s}">${LABEL[s]||s}</span>`;
+const ids=[];const ref=l=>(l||[]).map(id=>{let i=ids.indexOf(id);if(i<0){ids.push(id);i=ids.length-1;}return `<a class="sref" href="#src-tracker-${i+1}" title="${esc(sources[id]?.title)}">[${i+1}]</a>`}).join('');
+const n=v=>v==null?'<span class="muted">—</span>':Math.round(v).toLocaleString('ko-KR');
+const usd=v=>v==null?'—':(v>=1e9?'$'+(v/1e9).toFixed(2)+'B':'$'+(v/1e6).toFixed(1)+'M');
+const GRP={girl:'걸그룹',boy:'보이그룹',solo:'솔로'};
+$('#trkIntro').textContent=trk.intro+` (Claude 기준일 ${trk.claudeCut}, 병합·재검증 ${trk.asOf})`;
+const rows=trk.tours.map(r=>({...r,startKey:r.start||'9999',endKey:r.end||'9999',revKey:r.revenue}));
+let sk='startKey',asc=true,fy='all',fg='all';
+const COLS=[['artist','아티스트'],['tour','투어'],['startKey','시작'],['endKey','종료'],['region','권역·도시'],['tier','체급'],['shows','회차',1],['attendance','관객',1],['revKey','매출',1],['status','검증'],['ticket','예매처'],['note','메모']];
+function dateCell(r,k){const v=r[k];if(v)return esc(v);return `<span class="tbd">날짜 미정</span><span class="note">${esc(r.yearHint)}</span>`;}
+function render(){
+ const q=$('#trkSearch').value.trim().toLowerCase(),st=$('#trkStatus').value,ti=$('#trkTier').value;
+ let L=rows.filter(r=>(!q||(r.artist+' '+r.tour+' '+r.region).toLowerCase().includes(q))&&(fy==='all'||r.years.includes(fy))&&(fg==='all'||r.group===fg)&&(st==='all'||r.status===st)&&(ti==='all'||r.tier===ti));
+ L.sort((a,b)=>{const x=a[sk],y=b[sk];if(x==null&&y==null)return 0;if(x==null)return 1;if(y==null)return -1;const c=typeof x==='number'?x-y:String(x).localeCompare(String(y),'ko');return asc?c:-c;});
+ $('#trkTable').innerHTML='<thead><tr>'+COLS.map(([k,l,num])=>`<th class="${['ticket','note'].includes(k)?'':'sortable'} ${num?'num':''} ${k===sk?'active':''}" data-k="${k}">${l}${k===sk?(asc?' ▲':' ▼'):''}</th>`).join('')+'</tr></thead><tbody>'+
+  (L.map(r=>`<tr><td><b>${esc(r.artist)}</b><span class="note">${GRP[r.group]||''}</span></td><td>${esc(r.tour)}${r.changes?` <span class="badge chg" title="${esc(r.changes)}">변경</span>`:''}</td><td>${dateCell(r,'start')}</td><td>${dateCell(r,'end')}</td><td>${esc(r.region)}${r.cities?`<span class="note">${r.cities}개 도시</span>`:''}</td><td>${esc(r.tier)}</td><td class="num">${n(r.shows)}</td><td class="num">${r.attendanceText?esc(r.attendanceText):'<span class="muted">—</span>'}</td><td class="num">${r.revenueText?esc(r.revenueText):'<span class="muted">—</span>'}</td><td>${badge(r.status)}<span class="note">원자료: ${esc(r.claudeAcc)}</span>${ref(r.sources)}</td><td><a href="${esc(r.ticket.url)}" target="_blank" rel="noopener">${esc(r.ticket.name)}</a></td><td class="small">${esc(r.note)||'<span class="muted">—</span>'}${r.changes?`<span class="note"><b>변경:</b> ${esc(r.changes)}</span>`:''}</td></tr>`).join('')||'<tr><td colspan="12" class="muted">조건에 맞는 투어 없음</td></tr>')+'</tbody>';
+}
+$('#trkTable').addEventListener('click',e=>{const th=e.target.closest('th.sortable');if(!th)return;const k=th.dataset.k;if(k===sk)asc=!asc;else{sk=k;asc=!['shows','attendance','revKey'].includes(k);}render();});
+const seg=(id,set)=>$(id).addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;set(b.dataset.v);$(id).querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));render();});
+seg('#trkYear',v=>fy=v);seg('#trkGroup',v=>fg=v);
+['#trkSearch','#trkStatus','#trkTier'].forEach(s=>$(s).addEventListener('input',render));
+render();
+const cnt=s=>rows.filter(r=>r.status===s).length;
+$('#trkStats').innerHTML=[['투어 / 팀',rows.length+'건 / '+new Set(rows.map(r=>r.artist)).size+'팀'],['검증됨',cnt('verified')],['부분 확인',cnt('partial')],['충돌 / 미확인',cnt('conflict')+' / '+cnt('unverified')],['날짜 미정 포함',rows.filter(r=>!r.start||!r.end).length],['재검증 변경',rows.filter(r=>r.changes).length]].map(([k,v])=>`<div class="card"><div class="k">${k}</div><div class="v">${v}</div></div>`).join('');
+// records
+let rk='all',rs='attendance',ra=false;
+function renderRec(){
+ let L=trk.records.filter(r=>rk==='all'||r.kind===rk).map(r=>({...r,avg:r.attendance&&r.shows?r.attendance/r.shows:null}));
+ L.sort((a,b)=>{const x=a[rs],y=b[rs];if(x==null)return 1;if(y==null)return -1;const c=typeof x==='number'?x-y:String(x).localeCompare(String(y),'ko');return ra?c:-c;});
+ const C=[['artist','그룹'],['label','투어·공연'],['region','지역'],['shows','회차',1],['avg','1회 평균',1],['attendance','누적',1],['note','비고']];
+ $('#recTable').innerHTML='<thead><tr><th>#</th>'+C.map(([k,l,num])=>`<th class="sortable ${num?'num':''} ${k===rs?'active':''}" data-k="${k}">${l}</th>`).join('')+'<th>검증</th></tr></thead><tbody>'+L.map((r,i)=>`<tr><td class="num">${i+1}</td><td><b>${esc(r.artist)}</b></td><td>${esc(r.label)}</td><td>${esc(r.region)}</td><td class="num">${n(r.shows)}</td><td class="num">${n(r.avg)}</td><td class="num">${esc(r.attendanceText)}${r.estimate?' <span class="note">추정</span>':''}</td><td class="small">${esc(r.note)}</td><td>${badge(r.status)}${ref(['CLAUDE-TRACKER'])}</td></tr>`).join('')+'</tbody>';
+}
+$('#recTable').addEventListener('click',e=>{const th=e.target.closest('th.sortable');if(!th)return;const k=th.dataset.k;if(k===rs)ra=!ra;else{rs=k;ra=['artist','label','region','note'].includes(k);}renderRec();});
+$('#recKind').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;rk=b.dataset.v;$('#recKind').querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));renderRec();});
+renderRec();
+const B=trk.billboard2025;$('#bbTitle').textContent=B.title;
+$('#bbTable').innerHTML='<thead><tr><th>#</th><th>아티스트</th><th class="num">총매출</th><th class="num">관객</th><th class="num">회차</th><th class="num">회당 관객</th><th>검증</th></tr></thead><tbody>'+B.rows.map((r,i)=>`<tr><td class="num">${i+1}</td><td><b>${esc(r.artist)}</b></td><td class="num">${usd(r.gross)}</td><td class="num">${n(r.attendance)}</td><td class="num">${r.shows}</td><td class="num">${n(r.attendance/r.shows)}</td><td>${badge('verified')}${ref(B.sources)}</td></tr>`).join('')+'</tbody>';
+$('#trkOpen').innerHTML=trk.unresolved.map(x=>`<li>${badge('unverified')} ${esc(x)}</li>`).join('');
+$('#src-tracker').innerHTML='<h4>출처</h4><ol>'+ids.map((id,i)=>{const s=sources[id]||{title:id};return `<li id="src-tracker-${i+1}">${s.url?`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>`:esc(s.title)}</li>`}).join('')+'</ol>';
+})().catch(e=>console.error(e));
