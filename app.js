@@ -143,7 +143,7 @@ $('#trkStats').innerHTML=[['투어 / 팀',rows.length+'건 / '+new Set(rows.map(
 // records
 let rk='all',rs='attendance',ra=false;
 function renderRec(){
- let L=trk.records.filter(r=>rk==='all'||r.kind===rk).map(r=>({...r,avg:r.attendance&&r.shows?r.attendance/r.shows:null}));
+ let L=trk.records.filter(r=>rk==='all'||r.kind===rk).map(r=>({...r,avg:r.attendance&&r.shows?r.attendance/(r.attendance_basis_shows||r.shows):null}));
  L.sort((a,b)=>{const x=a[rs],y=b[rs];if(x==null)return 1;if(y==null)return -1;const c=typeof x==='number'?x-y:String(x).localeCompare(String(y),'ko');return ra?c:-c;});
  const C=[['artist','그룹'],['label','투어·공연'],['region','지역'],['shows','회차',1],['avg','1회 평균',1],['attendance','누적',1],['note','비고']];
  $('#recTable').innerHTML='<thead><tr><th>#</th>'+C.map(([k,l,num])=>`<th class="sortable ${num?'num':''} ${k===rs?'active':''}" data-k="${k}">${l}</th>`).join('')+'<th>검증</th></tr></thead><tbody>'+L.map((r,i)=>`<tr><td class="num">${i+1}</td><td><b>${esc(r.artist)}</b></td><td>${esc(r.label)}</td><td>${esc(r.region)}</td><td class="num">${n(r.shows)}</td><td class="num">${n(r.avg)}</td><td class="num">${esc(r.attendanceText)}${r.estimate?' <span class="note">추정</span>':''}</td><td class="small">${esc(r.note)}</td><td>${badge(r.status)}${ref(['CLAUDE-TRACKER'])}</td></tr>`).join('')+'</tbody>';
